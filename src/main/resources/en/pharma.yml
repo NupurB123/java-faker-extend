@@ -1,0 +1,4 @@
+en:
+  faker:
+    pharma:
+      equipment: ["Centrifuge", "Chromatograph", "Spectrophotometer"]

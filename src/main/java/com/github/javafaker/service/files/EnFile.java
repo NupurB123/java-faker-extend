@@ -26,7 +26,7 @@ public class EnFile {
         return path;
     }
 
-    private static List<String> FILES = Arrays.asList("address.yml",
+    private static List<String> FILES = Arrays.asList("address.yml", "pharma.yml",
             "ancient.yml",
             "animal.yml",
             "app.yml",
