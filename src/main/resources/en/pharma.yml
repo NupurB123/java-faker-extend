@@ -1,4 +1,33 @@
 en:
   faker:
     pharma:
-      equipment: ["Centrifuge", "Chromatograph", "Spectrophotometer"]
+      monitoringDevice:
+         model: ["TX200"]
+         type: ["Thermometer"]
+         status: ["Active"]
+         
+      facilityRoom:
+         name: ["Lab Room 1"]
+         
+      product:
+         name: ["AspiraX"]
+         description: ["Aspirin 500mg, pain and fever relief"]
+         type: ["Over-the-counter (OTC)"]
+      
+      equipment: 
+         name: ["Spectrophotometer SP-90"]
+         type: ["Analytical Instrument"]
+         status: ["Active"]
+            
+      manufacturingProcess:
+         name: ["Tablet Coating"]
+         description: ["This process involves applying a coating to tablets to protect the drug from the environment, enhance the drug's appearance, and make it easier to swallow."]
+         
+      batch:
+         status: []
+         
+      qualityControlTest:
+         name: ["Assay Test"]
+         methodology: ["High-Performance Liquid Chromatography (HPLC)"]
+         
+      
