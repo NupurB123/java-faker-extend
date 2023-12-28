@@ -1,6 +1,6 @@
 package com.github.javafaker.pharma;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ParticulateMonitoringEquipment {
 	private String equipmentType; // e.g., Optical Particle Counter

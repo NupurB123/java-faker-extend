@@ -394,6 +394,351 @@ public class Pharma {
 		return inspectionEquipment;
 	}
 
+	public LabelingEquipment labelingEquipment() {
+		LabelingEquipment equipment = new LabelingEquipment();
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.LabelingEquipment.Manufacturer", this, faker));
+		equipment
+				.setModelNumber(faker.fakeValuesService().resolve("pharma.LabelingEquipment.ModelNumber", this, faker));
+		equipment.setLabelType(faker.fakeValuesService().resolve("pharma.LabelingEquipment.LabelType", this, faker));
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.LabelingEquipment.Status", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return equipment;
+	}
+
+	public LaboratoryEquipment laboratoryEquipment() {
+		LaboratoryEquipment equipment = new LaboratoryEquipment();
+		equipment.setType(faker.fakeValuesService().resolve("pharma.LaboratoryEquipment.Type", this, faker));
+		equipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.LaboratoryEquipment.ModelNumber", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.LaboratoryEquipment.Manufacturer", this, faker));
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.LaboratoryEquipment.Status", this, faker));
+		equipment.setLocationName(
+				faker.fakeValuesService().resolve("pharma.LaboratoryEquipment.LocationName", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		return equipment;
+	}
+
+	public LaboratoryLocation laboratoryLocation() {
+		LaboratoryLocation location = new LaboratoryLocation();
+		location.setLocationName(
+				faker.fakeValuesService().resolve("pharma.LaboratoryLocation.LocationName", this, faker));
+		location.setLocationType(
+				faker.fakeValuesService().resolve("pharma.LaboratoryLocation.LocationType", this, faker));
+		return location;
+	}
+
+	public LyophilizationEquipment lyophilizationEquipment() {
+		LyophilizationEquipment equipment = new LyophilizationEquipment();
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.Manufacturer", this, faker));
+		equipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.ModelNumber", this, faker));
+		equipment
+				.setCapacity(faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.Capacity", this, faker));
+		equipment.setShelfArea(
+				faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.ShelfArea", this, faker));
+		equipment.setCondenserTempRange(
+				faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.CondenserTempRange", this, faker));
+		equipment.setVacuumRange(
+				faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.VacuumRange", this, faker));
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.LyophilizationEquipment.Status", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return equipment;
+	}
+
+	public LyophilizationVial lyophilizationVial() {
+		LyophilizationVial vial = new LyophilizationVial();
+		vial.setVialType(faker.fakeValuesService().resolve("pharma.LyophilizationVial.VialType", this, faker));
+		vial.setVolumeCapacity(faker.number().randomDouble(2, 0, 100)); // Adjust range and precision as needed
+		vial.setManufacturer(faker.fakeValuesService().resolve("pharma.LyophilizationVial.Manufacturer", this, faker));
+		vial.setSterilizationDate(faker.date().future(30, TimeUnit.DAYS)); // Sterilization date within the next 30 days
+		vial.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		return vial;
+	}
+
+	public Material material() {
+		Material material = new Material();
+		material.setMaterialCode(faker.fakeValuesService().resolve("pharma.Material.MaterialCode", this, faker));
+		material.setName(faker.fakeValuesService().resolve("pharma.Material.Name", this, faker));
+		material.setClassification(faker.fakeValuesService().resolve("pharma.Material.Classification", this, faker));
+		material.setQualityAttributes(
+				faker.fakeValuesService().resolve("pharma.Material.QualityAttributes", this, faker));
+		material.setSupplier(faker.fakeValuesService().resolve("pharma.Material.Supplier", this, faker));
+		material.setInventoryLevel(faker.number().numberBetween(1, 1000)); // Adjust the range as needed
+		material.setStorageCondition(
+				faker.fakeValuesService().resolve("pharma.Material.StorageCondition", this, faker));
+		return material;
+	}
+
+	public MonitoringLocation monitoringLocation() {
+		MonitoringLocation location = new MonitoringLocation();
+		location.setLocationName(
+				faker.fakeValuesService().resolve("pharma.MonitoringLocation.LocationName", this, faker));
+		location.setLocationType(
+				faker.fakeValuesService().resolve("pharma.MonitoringLocation.LocationType", this, faker));
+		location.setClassification(
+				faker.fakeValuesService().resolve("pharma.MonitoringLocation.Classification", this, faker));
+		location.setDescription(
+				faker.fakeValuesService().resolve("pharma.MonitoringLocation.Description", this, faker));
+		return location;
+	}
+
+	public PackagingEquipment packagingEquipment() {
+		PackagingEquipment equipment = new PackagingEquipment();
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.PackagingEquipment.Manufacturer", this, faker));
+		equipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.PackagingEquipment.ModelNumber", this, faker));
+		equipment.setPackagingType(
+				faker.fakeValuesService().resolve("pharma.PackagingEquipment.PackagingType", this, faker));
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.PackagingEquipment.Status", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return equipment;
+	}
+
+	public ParticulateMonitoringEquipment particulateMonitoringEquipment() {
+		ParticulateMonitoringEquipment equipment = new ParticulateMonitoringEquipment();
+		equipment.setEquipmentType(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.EquipmentType", this, faker));
+		equipment.setModel(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.Model", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.Manufacturer", this, faker));
+		equipment.setSerialNumber(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.SerialNumber", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLocationName(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.LocationName", this, faker));
+		equipment.setLocationType(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.LocationType", this, faker));
+		equipment.setStatus(
+				faker.fakeValuesService().resolve("pharma.ParticulateMonitoringEquipment.Status", this, faker));
+		return equipment;
+	}
+
+	public PreparedSolution preparedSolution() {
+		PreparedSolution solution = new PreparedSolution();
+		solution.setChemicalName(
+				faker.fakeValuesService().resolve("pharma.PreparedSolution.ChemicalName", this, faker));
+		solution.setConcentration(
+				faker.fakeValuesService().resolve("pharma.PreparedSolution.Concentration", this, faker));
+		solution.setVolumePrepared(faker.number().randomDouble(2, 0, 1000)); // Adjust the range and precision as needed
+		solution.setPreparedBy(faker.fakeValuesService().resolve("pharma.PreparedSolution.PreparedBy", this, faker));
+		solution.setPreparationDate(faker.date().past(30, TimeUnit.DAYS)); // Preparation date within the last 30 days
+		solution.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		solution.setSolutionParameters(
+				faker.fakeValuesService().resolve("pharma.PreparedSolution.SolutionParameters", this, faker));
+		return solution;
+	}
+
+	public PrimaryPackagingComponent primaryPackagingComponent() {
+		PrimaryPackagingComponent component = new PrimaryPackagingComponent();
+		component.setComponentType(
+				faker.fakeValuesService().resolve("pharma.PrimaryPackagingComponent.ComponentType", this, faker));
+		component.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.PrimaryPackagingComponent.Manufacturer", this, faker));
+		component.setMaterialSpecs(
+				faker.fakeValuesService().resolve("pharma.PrimaryPackagingComponent.MaterialSpecs", this, faker));
+		component.setStorageConditions(
+				faker.fakeValuesService().resolve("pharma.PrimaryPackagingComponent.StorageConditions", this, faker));
+		return component;
+	}
+
+	public Product product() {
+		Product product = new Product();
+		product.setDescription(faker.fakeValuesService().resolve("pharma.Product.Description", this, faker));
+		product.setProductCode(faker.fakeValuesService().resolve("pharma.Product.ProductCode", this, faker));
+		product.setFormula(faker.fakeValuesService().resolve("pharma.Product.Formula", this, faker));
+		product.setDosageForm(faker.fakeValuesService().resolve("pharma.Product.DosageForm", this, faker));
+		product.setStrength(faker.fakeValuesService().resolve("pharma.Product.Strength", this, faker));
+		return product;
+	}
+
+	public ProtectiveEquipment protectiveEquipment() {
+		ProtectiveEquipment equipment = new ProtectiveEquipment();
+		equipment.setEquipmentName(
+				faker.fakeValuesService().resolve("pharma.ProtectiveEquipment.EquipmentName", this, faker));
+		equipment.setType(faker.fakeValuesService().resolve("pharma.ProtectiveEquipment.Type", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.ProtectiveEquipment.Manufacturer", this, faker));
+		equipment.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		return equipment;
+	}
+
+	public PurificationConsumable purificationConsumable() {
+		PurificationConsumable consumable = new PurificationConsumable();
+		consumable.setConsumableName(
+				faker.fakeValuesService().resolve("pharma.PurificationConsumable.ConsumableName", this, faker));
+		consumable.setType(faker.fakeValuesService().resolve("pharma.PurificationConsumable.Type", this, faker));
+		consumable.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.PurificationConsumable.Manufacturer", this, faker));
+		consumable.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		consumable.setAssociatedProcessName(
+				faker.fakeValuesService().resolve("pharma.PurificationConsumable.AssociatedProcessName", this, faker));
+		return consumable;
+	}
+
+	public PurificationEquipment purificationEquipment() {
+		PurificationEquipment equipment = new PurificationEquipment();
+		equipment.setType(faker.fakeValuesService().resolve("pharma.PurificationEquipment.Type", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.PurificationEquipment.Manufacturer", this, faker));
+		equipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.PurificationEquipment.ModelNumber", this, faker));
+		equipment.setCapacity(faker.fakeValuesService().resolve("pharma.PurificationEquipment.Capacity", this, faker));
+		equipment.setInstallationDate(faker.date().past(365, TimeUnit.DAYS)); // Installation date within the last year
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.PurificationEquipment.Status", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return equipment;
+	}
+
+	public RawMaterial rawMaterial() {
+		RawMaterial material = new RawMaterial();
+		material.setMaterialName(faker.fakeValuesService().resolve("pharma.RawMaterial.MaterialName", this, faker));
+		material.setManufacturer(faker.fakeValuesService().resolve("pharma.RawMaterial.Manufacturer", this, faker));
+		material.setReceivedDate(faker.date().past(365, TimeUnit.DAYS)); // Received date within the last year
+		material.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		material.setQcStatus(faker.fakeValuesService().resolve("pharma.RawMaterial.QcStatus", this, faker));
+		return material;
+	}
+
+	public Room room() {
+		Room room = new Room();
+		room.setAreaName(faker.fakeValuesService().resolve("pharma.Room.AreaName", this, faker));
+		room.setName(faker.fakeValuesService().resolve("pharma.Room.Name", this, faker));
+		room.setPurpose(faker.fakeValuesService().resolve("pharma.Room.Purpose", this, faker));
+		room.setLastSanitationDate(faker.date().past(365, TimeUnit.DAYS)); // Last sanitation date within the last year
+		room.setSanitationFrequency(faker.number().numberBetween(1, 30)); // Sanitation frequency between 1 to 30 days
+		return room;
+	}
+
+	public SamplingKit samplingKit() {
+		SamplingKit kit = new SamplingKit();
+		kit.setKitType(faker.fakeValuesService().resolve("pharma.SamplingKit.KitType", this, faker));
+		kit.setManufacturer(faker.fakeValuesService().resolve("pharma.SamplingKit.Manufacturer", this, faker));
+		kit.setExpiryDate(faker.date().future(365, TimeUnit.DAYS)); // Expiry date within the next year
+		return kit;
+	}
+
+	public SamplingLocation samplingLocation() {
+		SamplingLocation location = new SamplingLocation();
+		location.setLocationName(
+				faker.fakeValuesService().resolve("pharma.SamplingLocation.LocationName", this, faker));
+		location.setLocationType(
+				faker.fakeValuesService().resolve("pharma.SamplingLocation.LocationType", this, faker));
+		location.setLocationClassification(
+				faker.fakeValuesService().resolve("pharma.SamplingLocation.LocationClassification", this, faker));
+		location.setDescription(faker.fakeValuesService().resolve("pharma.SamplingLocation.Description", this, faker));
+		return location;
+	}
+
+	public SamplingSurface samplingSurface() {
+		SamplingSurface surface = new SamplingSurface();
+		surface.setSurfaceType(faker.fakeValuesService().resolve("pharma.SamplingSurface.SurfaceType", this, faker));
+		surface.setLocationName(faker.fakeValuesService().resolve("pharma.SamplingSurface.LocationName", this, faker));
+		surface.setLocationType(faker.fakeValuesService().resolve("pharma.SamplingSurface.LocationType", this, faker));
+		surface.setDescription(faker.fakeValuesService().resolve("pharma.SamplingSurface.Description", this, faker));
+		return surface;
+	}
+
+	public SanitationEquipment sanitationEquipment() {
+		SanitationEquipment equipment = new SanitationEquipment();
+		equipment.setEquipmentName(
+				faker.fakeValuesService().resolve("pharma.SanitationEquipment.EquipmentName", this, faker));
+		equipment.setType(faker.fakeValuesService().resolve("pharma.SanitationEquipment.Type", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.SanitationEquipment.Manufacturer", this, faker));
+		return equipment;
+	}
+
+	public Sensor sensor() {
+		Sensor sensor = new Sensor();
+		sensor.setSensorType(faker.fakeValuesService().resolve("pharma.Sensor.SensorType", this, faker));
+		sensor.setModelNumber(faker.fakeValuesService().resolve("pharma.Sensor.ModelNumber", this, faker));
+		sensor.setSerialNumber(faker.fakeValuesService().resolve("pharma.Sensor.SerialNumber", this, faker));
+		sensor.setLocationName(faker.fakeValuesService().resolve("pharma.Sensor.LocationName", this, faker));
+		sensor.setLocationType(faker.fakeValuesService().resolve("pharma.Sensor.LocationType", this, faker));
+		sensor.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		sensor.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		sensor.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		sensor.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		sensor.setStatus(faker.fakeValuesService().resolve("pharma.Sensor.Status", this, faker));
+		return sensor;
+	}
+
+	public StorageContainer storageContainer() {
+		StorageContainer container = new StorageContainer();
+		container.setContainerType(
+				faker.fakeValuesService().resolve("pharma.StorageContainer.ContainerType", this, faker));
+		container.setVolumeWithUnit(
+				faker.fakeValuesService().resolve("pharma.StorageContainer.VolumeWithUnit", this, faker));
+		return container;
+	}
+
+	public SurfaceSamplingDevice surfaceSamplingDevice() {
+		SurfaceSamplingDevice device = new SurfaceSamplingDevice();
+		device.setDeviceType(faker.fakeValuesService().resolve("pharma.SurfaceSamplingDevice.DeviceType", this, faker));
+		device.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.SurfaceSamplingDevice.Manufacturer", this, faker));
+		device.setExpirationDate(faker.date().future(365, TimeUnit.DAYS)); // Expiration date within the next year
+		return device;
+	}
+
+	public ViralInactivationEquipment viralInactivationEquipment() {
+		ViralInactivationEquipment equipment = new ViralInactivationEquipment();
+		equipment.setEquipmentName(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.EquipmentName", this, faker));
+		equipment.setInactivationMethod(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.InactivationMethod", this, faker));
+		equipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.Manufacturer", this, faker));
+		equipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.ModelNumber", this, faker));
+		equipment.setLocationName(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.LocationName", this, faker));
+		equipment.setLocationType(
+				faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.LocationType", this, faker));
+		equipment.setStatus(faker.fakeValuesService().resolve("pharma.ViralInactivationEquipment.Status", this, faker));
+		equipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		equipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		equipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		equipment.setOperationalParameters(faker.fakeValuesService()
+				.resolve("pharma.ViralInactivationEquipment.OperationalParameters", this, faker));
+		return equipment;
+	}
+
+	public WaterSystem waterSystem() {
+		WaterSystem system = new WaterSystem();
+		system.setSystemName(faker.fakeValuesService().resolve("pharma.WaterSystem.SystemName", this, faker));
+		system.setSystemType(faker.fakeValuesService().resolve("pharma.WaterSystem.SystemType", this, faker));
+		system.setDescription(faker.fakeValuesService().resolve("pharma.WaterSystem.Description", this, faker));
+		system.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		system.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		system.setMonitoringPoints(
+				faker.fakeValuesService().resolve("pharma.WaterSystem.MonitoringPoints", this, faker));
+		return system;
+	}
+
 	public User user() {
 		Faker faker = new Faker();
 		User user = new User();

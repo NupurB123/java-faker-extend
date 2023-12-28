@@ -1,6 +1,6 @@
 package com.github.javafaker.pharma;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class SurfaceSamplingDevice {
 	private String deviceType; // e.g., Swab, Contact Plate, Rodac Plate
