@@ -362,6 +362,38 @@ public class Pharma {
 		return harvestingEquipment;
 	}
 
+	public Incubator incubator() {
+		Incubator incubator = new Incubator();
+		incubator.setIncubatorType(faker.fakeValuesService().resolve("pharma.Incubator.IncubatorType", this, faker));
+		incubator.setManufacturer(faker.fakeValuesService().resolve("pharma.Incubator.Manufacturer", this, faker));
+		incubator.setModelNumber(faker.fakeValuesService().resolve("pharma.Incubator.ModelNumber", this, faker));
+		incubator.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		incubator.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		incubator.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		incubator.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		incubator.setLocationName(faker.fakeValuesService().resolve("pharma.Incubator.LocationName", this, faker));
+		incubator.setLocationType(faker.fakeValuesService().resolve("pharma.Incubator.LocationType", this, faker));
+		incubator.setStatus(faker.fakeValuesService().resolve("pharma.Incubator.Status", this, faker));
+		return incubator;
+	}
+
+	public InspectionEquipment inspectionEquipment() {
+		InspectionEquipment inspectionEquipment = new InspectionEquipment();
+		inspectionEquipment.setManufacturer(
+				faker.fakeValuesService().resolve("pharma.InspectionEquipment.Manufacturer", this, faker));
+		inspectionEquipment.setModelNumber(
+				faker.fakeValuesService().resolve("pharma.InspectionEquipment.ModelNumber", this, faker));
+		inspectionEquipment.setInspectionType(
+				faker.fakeValuesService().resolve("pharma.InspectionEquipment.InspectionType", this, faker));
+		inspectionEquipment
+				.setStatus(faker.fakeValuesService().resolve("pharma.InspectionEquipment.Status", this, faker));
+		inspectionEquipment.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		inspectionEquipment.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		inspectionEquipment.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		inspectionEquipment.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return inspectionEquipment;
+	}
+
 	public User user() {
 		Faker faker = new Faker();
 		User user = new User();
