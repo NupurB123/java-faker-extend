@@ -443,29 +443,81 @@ en:
          EquipmentName: ["Scrub Brush"]
          Type: ["Manual"]
          Manufacturer: ["CleaningCo"]
-      
-      monitoringDevice:
-         model: ["TX200"]
-         type: ["Thermometer"]
-         status: ["Active"]
          
-      facilityRoom:
-         name: ["Lab Room 1"]
+      User:
+         FirstName: ["John"]
+         LastName: ["Doe"]
+         Email: ["johndoe@example.com"]
+         UserHandle: ["johndoe"]
+         Password: ["jdfsf@123"]
+         Role: ["user"]    
          
-      product:
-         name: ["AspiraX"]
-         description: ["Aspirin 500mg, pain and fever relief"]
-         type: ["Over-the-counter (OTC)"]
-            
-      manufacturingProcess:
-         name: ["Tablet Coating"]
-         description: ["This process involves applying a coating to tablets to protect the drug from the environment, enhance the drug's appearance, and make it easier to swallow."]
+      Blender:
+         BlendingVolume: [500]
+         BlendingSpeedRange: ['100-1000 RPM']  
          
-      batch:
-         status: []
+      CoatingMachine:
+         CoatingTechnology: ['Spray Coating']
+         MaxBatchSize: [100]
          
-      qualityControlTest:
-         name: ["Assay Test"]
-         methodology: ["High-Performance Liquid Chromatography (HPLC)"]
+      Dryer:
+         DryingTechnology: ['Fluidized Bed']
+         MaxDryingTemperature: [150]
          
-      
+      DustExtractor:
+         ExtractionCapacity: [1000]
+         FilterType: ['Bag filter']
+         
+      Granulator:
+         GranulationCapacity: [500]
+         MaxOperatingSpeed: [1000]
+         
+      IBCBin:
+         VolumeCapacity: [1000]
+         
+      InspectionMachine:
+         InspectionSpeed: [100]
+         TechnologyUsed: ["Visual Inspection"]
+         
+      MillingMachine:
+         MillingCapacity: [500]
+         
+      Mixer:
+         MixingCapacity: [1000]
+         MixerType: ['Planetary Mixer']
+         
+      Recipe:
+         ProductName: ["Antibiotic Tablets"]
+         RecipeName: ["Tablet Recipe 1"]
+         Formula: ["Active Ingredient: 500mg, Filler: 100mg, Disintegrant: 10mg"]
+         CreatedAt: ["2023-01-01 10:30:00"]
+         UpdatedAt: ["2023-01-02 15:45:00"]
+         
+      Sifter:
+         MeshSizeRange: ["100 - 200 mesh"]
+         SiftingSpeed: [500]
+         
+      Stirrer:
+         StirringSpeedRange: ["100 - 1000 RPM"]
+         
+      TabletDeduster:
+         DedustingEfficiency: [95]
+         DedustingSpeed: [500]
+         
+      TabletPresses:
+         MaxTabletOutput: [10000]
+         CompressionForceRange: ['10 - 50 kN']
+         
+      TabletToolings:
+         ToolingSize: ['8 mm']
+         ToolingShape: ['Round']
+         
+      Batch:
+         BatchID: ['BATCH001']
+         ProductName: ['Antibiotic Tablets']
+         RecipeName: ['Tablet Recipe 1']
+         StartDate: ['2023-05-15 09:00:00']
+         EndDate: ['2023-05-15 17:00:00']
+         Status: ['Completed']
+         PlannedQuantityProduced: [100000]
+         ActualQuantityProduced: [99980]

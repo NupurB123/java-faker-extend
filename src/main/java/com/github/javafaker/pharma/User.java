@@ -1,4 +1,4 @@
-package com.github.javafaker;
+package com.github.javafaker.pharma;
 
 public class User {
 	private String firstName;
@@ -6,6 +6,29 @@ public class User {
 	private String email;
 	private String userhandle;
 	private String password;
+	private String role;
+
+	public User() {
+		super();
+	}
+
+	public User(String firstName, String lastName, String email, String userhandle, String password, String role) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.userhandle = userhandle;
+		this.password = password;
+		this.role = role;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public String getFirstName() {
 		return firstName;

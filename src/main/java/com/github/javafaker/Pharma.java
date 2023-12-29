@@ -740,13 +740,156 @@ public class Pharma {
 	}
 
 	public User user() {
-		Faker faker = new Faker();
 		User user = new User();
 		user.setFirstName(faker.name().firstName());
 		user.setLastName(faker.name().lastName());
-		user.setEmail(null);
-		user.setPassword(null);
-		user.setUserhandle(null);
+		user.setEmail(faker.internet().emailAddress());
+		user.setUserhandle(faker.name().username());
+		user.setRole(faker.fakeValuesService().resolve("pharma.User.Role", this, faker));
 		return user;
+	}
+
+	public Blender blender() {
+		Blender blender = new Blender();
+		blender.setBlendingVolume(faker.number().numberBetween(100, 1000));
+		blender.setBlendingSpeedRange(faker.number().numberBetween(100, 1000) + " RPM - "
+				+ faker.number().numberBetween(1000, 5000) + " RPM");
+		return blender;
+	}
+
+	public CoatingMachine coatingMachine() {
+		CoatingMachine coatingMachine = new CoatingMachine();
+		Faker faker = new Faker();
+		coatingMachine.setCoatingTechnology(
+				faker.fakeValuesService().resolve("pharma.CoatingMachine.CoatingTechnology", this, faker));
+		;
+		coatingMachine.setMaxBatchSize(faker.number().numberBetween(1, 1000));
+		;
+		return coatingMachine;
+	}
+
+	public Dryer dryer() {
+		Dryer dryer = new Dryer();
+		Faker faker = new Faker();
+		dryer.setDryingTechnology(faker.fakeValuesService().resolve("pharma.Dryer.DryingTechnology", this, faker));
+		dryer.setMaxDryingTemperature(faker.number().numberBetween(25, 200));
+		return dryer;
+	}
+
+	public DustExtractor dustExtractor() {
+		DustExtractor dustExtractor = new DustExtractor();
+		Faker faker = new Faker();
+		dustExtractor.setExtractionCapacity(faker.number().numberBetween(100, 1000));
+		dustExtractor.setFilterType(faker.fakeValuesService().resolve("pharma.DustExtractor.FilterType", this, faker));
+		return dustExtractor;
+	}
+
+	public Granulator granulator() {
+		Granulator granulator = new Granulator();
+		Faker faker = new Faker();
+		granulator.setGranulationCapacity(faker.number().numberBetween(100, 1000));
+		granulator.setMaxOperatingSpeed(faker.number().numberBetween(1000, 5000));
+		return granulator;
+	}
+
+	public IBCBin ibcBin() {
+		IBCBin ibcBin = new IBCBin();
+		Faker faker = new Faker();
+		ibcBin.setVolumeCapacity(faker.number().numberBetween(100, 1000));
+		return ibcBin;
+	}
+
+	public InspectionMachine inspectionMachine() {
+		InspectionMachine inspectionMachine = new InspectionMachine();
+		Faker faker = new Faker();
+		inspectionMachine.setInspectionSpeed(faker.number().numberBetween(100, 1000));
+		inspectionMachine.setTechnologyUsed(
+				faker.fakeValuesService().resolve("pharma.InspectionMachine.TechnologyUsed", this, faker));
+		return inspectionMachine;
+	}
+
+	public MillingMachine millingMachine() {
+		MillingMachine millingMachine = new MillingMachine();
+		Faker faker = new Faker();
+		millingMachine.setMillingCapacity(faker.number().numberBetween(100, 1000));
+		return millingMachine;
+	}
+
+	public Mixer mixer() {
+		Mixer mixer = new Mixer();
+		Faker faker = new Faker();
+		mixer.setMixingCapacity(faker.number().numberBetween(100, 1000));
+		mixer.setMixerType(faker.fakeValuesService().resolve("pharma.Mixer.MixerType", this, faker));
+		return mixer;
+	}
+
+	public Recipe recipe() {
+		Recipe recipe = new Recipe();
+		Faker faker = new Faker();
+		recipe.setProductName(faker.food().ingredient());
+		recipe.setRecipeName(faker.food().dish());
+		recipe.setFormula(faker.lorem().sentence());
+		recipe.setCreatedAt(faker.date().past(365, TimeUnit.DAYS));
+		recipe.setUpdatedAt(faker.date().past(365, TimeUnit.DAYS));
+		return recipe;
+	}
+
+	public Sifter sifter() {
+		Sifter sifter = new Sifter();
+		Faker faker = new Faker();
+		sifter.setMeshSizeRange(faker.fakeValuesService().resolve("pharma.Sifter.MeshSizeRange", this, faker));
+		sifter.setSiftingSpeed(faker.number().numberBetween(100, 1000));
+		return sifter;
+	}
+
+	public Stirrer stirrer() {
+		Stirrer stirrer = new Stirrer();
+		Faker faker = new Faker();
+		stirrer.setStirringSpeedRange(
+				faker.fakeValuesService().resolve("pharma.Stirrer.StirringSpeedRange", this, faker));
+		return stirrer;
+	}
+
+	public TabletDeduster tabletDeduster() {
+		TabletDeduster tabletDeduster = new TabletDeduster();
+		Faker faker = new Faker();
+		tabletDeduster.setDedustingEfficiency(faker.number().numberBetween(90, 100));
+		tabletDeduster.setDedustingSpeed(faker.number().numberBetween(1000, 5000));
+		return tabletDeduster;
+	}
+
+	public TabletPress tabletPress() {
+		TabletPress tabletPress = new TabletPress();
+		Faker faker = new Faker();
+		tabletPress.setMaxTabletOutput(faker.number().numberBetween(1000, 10000));
+		tabletPress.setCompressionForceRange(
+				faker.fakeValuesService().resolve("pharma.TabletPress.CompressionForceRange", this, faker));
+		return tabletPress;
+	}
+
+	public TabletTooling tabletTooling() {
+		TabletTooling tabletTooling = new TabletTooling();
+		Faker faker = new Faker();
+		tabletTooling
+				.setToolingSize(faker.fakeValuesService().resolve("pharma.TabletTooling.ToolingSize", this, faker));
+		tabletTooling
+				.setToolingShape(faker.fakeValuesService().resolve("pharma.TabletTooling.ToolingShape", this, faker));
+		return tabletTooling;
+	}
+
+	public Batch batch() {
+		Batch batch = new Batch();
+		Faker faker = new Faker();
+		batch.setBatchId(faker.idNumber().valid());
+		batch.setProductName(faker.food().ingredient());
+		batch.setRecipeName(faker.food().dish());
+		batch.setStartDate(faker.date().past(365, TimeUnit.DAYS));
+		batch.setEndDate(faker.date().past(365, TimeUnit.DAYS));
+		batch.setStatus(faker.random().nextBoolean() ? "In Progress" : "Completed");
+		batch.setPlannedQuantityProduced(faker.number().numberBetween(100, 1000));
+		batch.setCreatedAt(faker.date().past(365, TimeUnit.DAYS));
+		batch.setUpdatedAt(faker.date().past(365, TimeUnit.DAYS));
+		batch.setActualQuantityProduced(faker.number().numberBetween(100, 1000));
+		return batch;
 	}
 }
