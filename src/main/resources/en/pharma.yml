@@ -2,522 +2,784 @@ en:
   faker:
     pharma:
       MonitoringLocation:
-         LocationName: ["QA Microbiology Lab"]
-         LocationType: ["Lab"]
-         Classification: ["ISO Class 7"]
-         Description: ["Quality assurance lab for microbiological testing and sterility assurance"]
-      
+        LocationName: ["QA Microbiology Lab"]
+        LocationType: ["Lab"]
+        Classification: ["ISO Class 7"]
+        Description:
+          [
+            "Quality assurance lab for microbiological testing and sterility assurance",
+          ]
+
       Sensor:
-         SensorType: ["Particle Counter"]
-         ModelNumber: ["PC-2000"]
-         SerialNumber: ["SN20001"]
-         LocationName: ["QA Microbiology Lab"]
-         LocationType: ["Lab"]
-         LastCalibrationDate: ["2023-03-15"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-20"]
-         MaintenanceFrequency: [365]
-         Status: ["Active"]
-         
+        SensorType: ["Particle Counter"]
+        ModelNumber: ["PC-2000"]
+        SerialNumber: ["SN20001"]
+        LocationName: ["QA Microbiology Lab"]
+        LocationType: ["Lab"]
+        LastCalibrationDate: ["2023-03-15"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-20"]
+        MaintenanceFrequency: [365]
+        Status: ["Active"]
+
       Equipment:
-         EquipmentType: ["TOC Analyzer"]
-         ModelNumber: ["TOC-1000X"]
-         SerialNumber: ["SN1000X1234"]
-         Manufacturer: ["LabTech Instruments"]
-         LastCalibrationDate: ["2023-04-01"]
-         CalibrationFrequency: [365]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [365]
-         LocationName: ["R&D Lab"]
-         LocationType: ["Lab"]
-         Status: ["Active"]
-      
+        EquipmentType: ["TOC Analyzer"]
+        ModelNumber: ["TOC-1000X"]
+        SerialNumber: ["SN1000X1234"]
+        Manufacturer: ["LabTech Instruments"]
+        LastCalibrationDate: ["2023-04-01"]
+        CalibrationFrequency: [365]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [365]
+        LocationName: ["R&D Lab"]
+        LocationType: ["Lab"]
+        Status: ["Active"]
+
       SamplingLocation:
-         LocationName: ["Sterile Manufacturing Area"]
-         LocationType: ["Cleanroom"]
-         LocationClassification: ["ISO Class 5"]
-         Description: ["Area for production of sterile drug products with controlled particle and microbial contamination levels."]
-      
+        LocationName: ["Sterile Manufacturing Area"]
+        LocationType: ["Cleanroom"]
+        LocationClassification: ["ISO Class 5"]
+        Description:
+          [
+            "Area for production of sterile drug products with controlled particle and microbial contamination levels.",
+          ]
+
       AirSampler:
-         SamplerType: ["Impactor"]
-         ModelNumber: ["AS-300"]
-         SerialNumber: ["SN300IMP123"]
-         LastCalibrationDate: ["2023-03-01"]
-         CalibrationFrequency: [90]
-         LastMaintenanceDate: ["2023-02-01"]
-         MaintenanceFrequency: [180]
-         LocationName: ["Manufacturing Zone A"]
-         LocationType: ["Cleanroom"]
-         Status: ["Active"]
-      
+        SamplerType: ["Impactor"]
+        ModelNumber: ["AS-300"]
+        SerialNumber: ["SN300IMP123"]
+        LastCalibrationDate: ["2023-03-01"]
+        CalibrationFrequency: [90]
+        LastMaintenanceDate: ["2023-02-01"]
+        MaintenanceFrequency: [180]
+        LocationName: ["Manufacturing Zone A"]
+        LocationType: ["Cleanroom"]
+        Status: ["Active"]
+
       GrowthMedia:
-         MediaName: ["Soy Agar"]
-         MediaType: ["Tryptic Soy Agar"]
-         Manufacturer: ["BioLab Inc."]
-         ExpirationDate: ["2024-12-31"]
-         
+        MediaName: ["Soy Agar"]
+        MediaType: ["Tryptic Soy Agar"]
+        Manufacturer: ["BioLab Inc."]
+        ExpirationDate: ["2024-12-31"]
+
       SamplingSurface:
-         SurfaceType: ["Stainless Steel"]
-         LocationName: ["Mixing Room 4"]
-         LocationType: ["Cleanroom"]
-         Description: ["Surface for preparation and mixing of pharmaceutical ingredients."]
-         
+        SurfaceType: ["Stainless Steel"]
+        LocationName: ["Mixing Room 4"]
+        LocationType: ["Cleanroom"]
+        Description:
+          ["Surface for preparation and mixing of pharmaceutical ingredients."]
+
       SurfaceSamplingDevice:
-         DeviceType: ["Swab"]
-         Manufacturer: ["PharmaLabTech"]
-         ExpirationDate: ["2025-06-30"]
-         
+        DeviceType: ["Swab"]
+        Manufacturer: ["PharmaLabTech"]
+        ExpirationDate: ["2025-06-30"]
+
       SamplingKit:
-         KitType: ["Glove Fingertip Samplers"]
-         Manufacturer: ["CleanGear"]
-         ExpiryDate: ["2025-12-31"]
-         
+        KitType: ["Glove Fingertip Samplers"]
+        Manufacturer: ["CleanGear"]
+        ExpiryDate: ["2025-12-31"]
+
       WaterSystem:
-         SystemName: ["Primary WFI System"]
-         SystemType: ["WFI - Water for Injection"]
-         Description: ["System providing high quality water for product formulation and cleaning processes"]
-         LastMaintenanceDate: ["2023-04-01"]
-         MaintenanceFrequency: [30]
-         MonitoringPoints: ["MP-101, MP-102, MP-103"]  # Example of monitoring point IDs or names
-         
+        SystemName: ["Primary WFI System"]
+        SystemType: ["WFI - Water for Injection"]
+        Description:
+          [
+            "System providing high quality water for product formulation and cleaning processes",
+          ]
+        LastMaintenanceDate: ["2023-04-01"]
+        MaintenanceFrequency: [30]
+        MonitoringPoints: ["MP-101, MP-102, MP-103"] # Example of monitoring point IDs or names
+
       GasSystem:
-         SystemName: ["Central Nitrogen Supply"]
-         SystemType: ["Nitrogen"]
-         Description: ["Provides high-purity nitrogen for various chemical processing and preservation applications"]
-         LastMaintenanceDate: ["2023-03-21"]
-         MaintenanceFrequency: [180]
-         MonitoringPoints: ["N2-MP1, N2-MP2, N2-MP3"]   # Example of monitoring point IDs or names
-         
+        SystemName: ["Central Nitrogen Supply"]
+        SystemType: ["Nitrogen"]
+        Description:
+          [
+            "Provides high-purity nitrogen for various chemical processing and preservation applications",
+          ]
+        LastMaintenanceDate: ["2023-03-21"]
+        MaintenanceFrequency: [180]
+        MonitoringPoints: ["N2-MP1, N2-MP2, N2-MP3"] # Example of monitoring point IDs or names
+
       GasSamplingPoint:
-         GasSystemName: ["Cleanroom Air Supply"]
-         GasSystemType: ["Compressed Air"]
-         PointName: ["CR-AS-01"]
-         LocationDescription: ["Air supply point near HEPA filters in Cleanroom A"]
-         SamplingFrequency: [30]
-         SamplingMethod: ["Qualitative test for oil vapor and moisture content"]
-                  
+        GasSystemName: ["Cleanroom Air Supply"]
+        GasSystemType: ["Compressed Air"]
+        PointName: ["CR-AS-01"]
+        LocationDescription:
+          ["Air supply point near HEPA filters in Cleanroom A"]
+        SamplingFrequency: [30]
+        SamplingMethod: ["Qualitative test for oil vapor and moisture content"]
+
       Incubator:
-         IncubatorType: ["CO2 Incubator"]
-         Manufacturer: ["LabEquipmentCo"]
-         ModelNumber: ["LECO2-500"]
-         LastCalibrationDate: ["2023-03-01"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [180]
-         LocationName: ["Cell Culture Lab"]
-         LocationType: ["Lab"]
-         Status: ["Active"]
-         
+        IncubatorType: ["CO2 Incubator"]
+        Manufacturer: ["LabEquipmentCo"]
+        ModelNumber: ["LECO2-500"]
+        LastCalibrationDate: ["2023-03-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [180]
+        LocationName: ["Cell Culture Lab"]
+        LocationType: ["Lab"]
+        Status: ["Active"]
+
       ParticulateMonitoringEquipment:
-         EquipmentType: ["Optical Particle Counter"]
-         Model: ["OPC-5000"]
-         Manufacturer: ["AirTech Solutions"]
-         SerialNumber: ["AT-5000-SN1234"]
-         LastCalibrationDate: ["2023-01-10"]
-         CalibrationFrequency: [365]
-         LastMaintenanceDate: ["2022-12-01"]
-         MaintenanceFrequency: [180]
-         LocationName: ["QA Inspection Room"]
-         LocationType: ["Lab"]
-         Status: ["Active"]
-         
+        EquipmentType: ["Optical Particle Counter"]
+        Model: ["OPC-5000"]
+        Manufacturer: ["AirTech Solutions"]
+        SerialNumber: ["AT-5000-SN1234"]
+        LastCalibrationDate: ["2023-01-10"]
+        CalibrationFrequency: [365]
+        LastMaintenanceDate: ["2022-12-01"]
+        MaintenanceFrequency: [180]
+        LocationName: ["QA Inspection Room"]
+        LocationType: ["Lab"]
+        Status: ["Active"]
+
       ContaminantsEquipment:
-         EquipmentType: ["Gas Chromatograph"]
-         Model: ["GC-2010"]
-         Manufacturer: ["TechAnalyzers Inc."]
-         SerialNumber: ["TA-GC198345"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-03-15"]
-         MaintenanceFrequency: [365]
-         LocationName: ["Chemical Analysis Lab"]
-         LocationType: ["Lab"]
-         Status: ["Active"]
-         
+        EquipmentType: ["Gas Chromatograph"]
+        Model: ["GC-2010"]
+        Manufacturer: ["TechAnalyzers Inc."]
+        SerialNumber: ["TA-GC198345"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-03-15"]
+        MaintenanceFrequency: [365]
+        LocationName: ["Chemical Analysis Lab"]
+        LocationType: ["Lab"]
+        Status: ["Active"]
+
       RawMaterial:
-         MaterialName: ["Ascorbic Acid"]
-         Manufacturer: ["VitaPharm Ltd."]
-         ReceivedDate: ["2023-04-05"]
-         ExpiryDate: ["2026-04-05"]
-         QCStatus: ["Quarantine"]
-         
+        MaterialName: ["Ascorbic Acid"]
+        Manufacturer: ["VitaPharm Ltd."]
+        ReceivedDate: ["2023-04-05"]
+        ExpiryDate: ["2026-04-05"]
+        QCStatus: ["Quarantine"]
+
       BioReactor:
-         BioreactorName: ["BR-1000"]
-         BioreactorType: ["Stirred Tank"]
-         VolumeCapacity: [1000.0]
-         Manufacturer: ["BioEquipTech"]
-         ModelNumber: ["BET-T1000"]
-         LocationName: ["Upstream Processing Area"]
-         LocationType: ["Lab"]
-         Status: ["In Use"]
-         LastCalibrationDate: ["2023-04-15"]
-         CalibrationFrequency: [90]
-         LastMaintenanceDate: ["2023-04-01"]
-         MaintenanceFrequency: [180]
-         CellLineName: ["CHO-K1"]
-         SourceOrganism: ["Cricetulus griseus (Chinese hamster)"]
-         OperationalParameters: ['{"temperature": 37.0, "pH": 7.2, "agitation": 200}']  # Example JSON representation of operational parameters
-      
+        BioreactorName: ["BR-1000"]
+        BioreactorType: ["Stirred Tank"]
+        VolumeCapacity: [1000.0]
+        Manufacturer: ["BioEquipTech"]
+        ModelNumber: ["BET-T1000"]
+        LocationName: ["Upstream Processing Area"]
+        LocationType: ["Lab"]
+        Status: ["In Use"]
+        LastCalibrationDate: ["2023-04-15"]
+        CalibrationFrequency: [90]
+        LastMaintenanceDate: ["2023-04-01"]
+        MaintenanceFrequency: [180]
+        CellLineName: ["CHO-K1"]
+        SourceOrganism: ["Cricetulus griseus (Chinese hamster)"]
+        OperationalParameters: [
+            '{"temperature": 37.0, "pH": 7.2, "agitation": 200}',
+          ] # Example JSON representation of operational parameters
+
       BufferSolution:
-         BufferName: ["Phosphate-Buffered Saline"]
-         pHValue: [7.4]
-         Composition: ['{"NaCl": "137 mM", "KCl": "2.7 mM", "Na2HPO4": "10 mM", "KH2PO4": "1.8 mM"}']
-         Manufacturer: ["LabChem Solutions"]
-         ExpiryDate: ["2025-12-31"]
-         
+        BufferName: ["Phosphate-Buffered Saline"]
+        pHValue: [7.4]
+        Composition:
+          [
+            '{"NaCl": "137 mM", "KCl": "2.7 mM", "Na2HPO4": "10 mM", "KH2PO4": "1.8 mM"}',
+          ]
+        Manufacturer: ["LabChem Solutions"]
+        ExpiryDate: ["2025-12-31"]
+
       EquipmentSensor:
-         SensorType: ["pH"]
-         ModelNumber: ["PH-2000"]
-         Manufacturer: ["SensorsTech"]
-         Status: ["Active"]
-         LastCalibrationDate: ["2023-04-10"]
-         CalibrationFrequency: [90]
-         LastMaintenanceDate: ["2023-01-10"]
-         MaintenanceFrequency: [180]
-         OperationalRange: ["0-14"]
-         LocationName: ["Fermentation Room"]
-         LocationType: ["Lab"]
-         Accuracy: ["±0.01"]
-         
+        SensorType: ["pH"]
+        ModelNumber: ["PH-2000"]
+        Manufacturer: ["SensorsTech"]
+        Status: ["Active"]
+        LastCalibrationDate: ["2023-04-10"]
+        CalibrationFrequency: [90]
+        LastMaintenanceDate: ["2023-01-10"]
+        MaintenanceFrequency: [180]
+        OperationalRange: ["0-14"]
+        LocationName: ["Fermentation Room"]
+        LocationType: ["Lab"]
+        Accuracy: ["±0.01"]
+
       FeedStock:
-         FeedStockType: ["nutrient"]
-         Composition: ['{"amino acids": "5 g/L", "vitamins": "10 mg/L", "glucose": "40 g/L"}']
-         OptimalUseRate: [1.0] # Assuming the rate is in L/hr for a 1,000 L bioreactor
-         Manufacturer: ["BioNutrients Inc."]
-         ExpiryDate: ["2025-12-31"]
-         StorageConditions: ["Store at 4°C away from light"]
-         
+        FeedStockType: ["nutrient"]
+        Composition:
+          [
+            '{"amino acids": "5 g/L", "vitamins": "10 mg/L", "glucose": "40 g/L"}',
+          ]
+        OptimalUseRate: [1.0] # Assuming the rate is in L/hr for a 1,000 L bioreactor
+        Manufacturer: ["BioNutrients Inc."]
+        ExpiryDate: ["2025-12-31"]
+        StorageConditions: ["Store at 4°C away from light"]
+
       HarvestingEquipment:
-         EquipmentName: ["SuperCentri 3000"]
-         EquipmentType: ["Centrifuge"]
-         Manufacturer: ["ProcessTech Instruments"]
-         ModelNumber: ["PTI-3000C"]
-         Status: ["In Use"]
-         LastCalibrationDate: ["2023-04-12"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [365]
-         LocationName: ["Downstream Processing Room"]
-         LocationType: ["Lab"]
-         OperationalParameters: ['{"speed":"3000 rpm", "temperature":"4°C"}'] # Example JSON representation of operational parameters
-      
+        EquipmentName: ["SuperCentri 3000"]
+        EquipmentType: ["Centrifuge"]
+        Manufacturer: ["ProcessTech Instruments"]
+        ModelNumber: ["PTI-3000C"]
+        Status: ["In Use"]
+        LastCalibrationDate: ["2023-04-12"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [365]
+        LocationName: ["Downstream Processing Room"]
+        LocationType: ["Lab"]
+        OperationalParameters: ['{"speed":"3000 rpm", "temperature":"4°C"}'] # Example JSON representation of operational parameters
+
       ChromatographySystem:
-         SystemName: ["PurifyMaster 5000"]
-         SystemType: ["Affinity"]
-         Manufacturer: ["ChromaTech Inc."]
-         ModelNumber: ["CTI-5000"]
-         ColumnType: ["Protein A"]
-         ResinType: ["Crosslinked agarose"]
-         LastCalibrationDate: ["2023-04-15"]
-         CalibrationFrequency: [90]
-         LastMaintenanceDate: ["2023-02-01"]
-         MaintenanceFrequency: [180]
-         LocationName: ["Purification Lab"]
-         LocationType: ["Lab"]
-         
+        SystemName: ["PurifyMaster 5000"]
+        SystemType: ["Affinity"]
+        Manufacturer: ["ChromaTech Inc."]
+        ModelNumber: ["CTI-5000"]
+        ColumnType: ["Protein A"]
+        ResinType: ["Crosslinked agarose"]
+        LastCalibrationDate: ["2023-04-15"]
+        CalibrationFrequency: [90]
+        LastMaintenanceDate: ["2023-02-01"]
+        MaintenanceFrequency: [180]
+        LocationName: ["Purification Lab"]
+        LocationType: ["Lab"]
+
       FiltersAndMembrane:
-         FilterType: ["Tangential Flow"]
-         PoreSize: [0.2]
-         SurfaceArea: [2.5]
-         Manufacturer: ["FilterTech"]
-         ModelNumber: ["FT-TF200"]
-         UsageLimit: [10] # Assuming this is the number of cycles before replacement is needed
-         Status: ["Sterilized"]
-         AssociatedProcessName: ["Protein Concentration Process"]
-         
+        FilterType: ["Tangential Flow"]
+        PoreSize: [0.2]
+        SurfaceArea: [2.5]
+        Manufacturer: ["FilterTech"]
+        ModelNumber: ["FT-TF200"]
+        UsageLimit: [10] # Assuming this is the number of cycles before replacement is needed
+        Status: ["Sterilized"]
+        AssociatedProcessName: ["Protein Concentration Process"]
+
       ViralInactivationEquipment:
-         EquipmentName: ["ViroSafe-1000"]
-         InactivationMethod: ["Low pH"]
-         Manufacturer: ["ProcessEquipment Inc."]
-         ModelNumber: ["VI-1000LP"]
-         LocationName: ["Bioprocessing Suite 3"]
-         LocationType: ["Production"]
-         Status: ["In Use"]
-         LastCalibrationDate: ["2023-04-10"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-20"]
-         MaintenanceFrequency: [365]
-         OperationalParameters: ['{"pH target": "4.0", "hold time": "60 minutes"}'] # Example JSON representation of operational parameters
-      
+        EquipmentName: ["ViroSafe-1000"]
+        InactivationMethod: ["Low pH"]
+        Manufacturer: ["ProcessEquipment Inc."]
+        ModelNumber: ["VI-1000LP"]
+        LocationName: ["Bioprocessing Suite 3"]
+        LocationType: ["Production"]
+        Status: ["In Use"]
+        LastCalibrationDate: ["2023-04-10"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-20"]
+        MaintenanceFrequency: [365]
+        OperationalParameters: [
+            '{"pH target": "4.0", "hold time": "60 minutes"}',
+          ] # Example JSON representation of operational parameters
+
       PurificationConsumable:
-         ConsumableName: ["ChromaClear HighResin"]
-         Type: ["Resin"]
-         Manufacturer: ["Puritech"]
-         ExpiryDate: ["2025-12-31"]
-         AssociatedProcessName: ["Antibody Purification"]
-         
+        ConsumableName: ["ChromaClear HighResin"]
+        Type: ["Resin"]
+        Manufacturer: ["Puritech"]
+        ExpiryDate: ["2025-12-31"]
+        AssociatedProcessName: ["Antibody Purification"]
+
       Excipient:
-         Name: ["Pharmagel"]
-         Type: ["Stabilizer"]
-         Manufacturer: ["ExcipioPharm Ltd."]
-         StandardConcentration: ["10% w/v"]
-         ExpiryDate: ["2025-08-15"]
-         StorageCondition: ["Store at room temperature, away from moisture and light"]
-         
+        Name: ["Pharmagel"]
+        Type: ["Stabilizer"]
+        Manufacturer: ["ExcipioPharm Ltd."]
+        StandardConcentration: ["10% w/v"]
+        ExpiryDate: ["2025-08-15"]
+        StorageCondition:
+          ["Store at room temperature, away from moisture and light"]
+
       FillFinishEquipment:
-         EquipmentName: ["QuickFill A300"]
-         EquipmentType: ["Aseptic Filler"]
-         Manufacturer: ["PharmEquip Ltd."]
-         ModelNumber: ["A300-FF"]
-         Status: ["In Use"]
-         LastCalibrationDate: ["2023-04-01"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [365]
-         
+        EquipmentName: ["QuickFill A300"]
+        EquipmentType: ["Aseptic Filler"]
+        Manufacturer: ["PharmEquip Ltd."]
+        ModelNumber: ["A300-FF"]
+        Status: ["In Use"]
+        LastCalibrationDate: ["2023-04-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [365]
+
       PrimaryPackagingComponent:
-         ComponentType: ["Vial"]
-         Manufacturer: ["QualityVials Inc."]
-         MaterialSpecs: ["Type I Borosilicate Glass"]
-         StorageConditions: ["Store at room temperature, avoid exposure to direct sunlight"]
-         
+        ComponentType: ["Vial"]
+        Manufacturer: ["QualityVials Inc."]
+        MaterialSpecs: ["Type I Borosilicate Glass"]
+        StorageConditions:
+          ["Store at room temperature, avoid exposure to direct sunlight"]
+
       PurificationEquipment:
-         Type: ["Chromatography System"]
-         Manufacturer: ["PuriTech Global"]
-         ModelNumber: ["PTG-2000"]
-         Capacity: ["200 L"]
-         InstallationDate: ["2019-08-15"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-04-11"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [365]
-         
+        Type: ["Chromatography System"]
+        Manufacturer: ["PuriTech Global"]
+        ModelNumber: ["PTG-2000"]
+        Capacity: ["200 L"]
+        InstallationDate: ["2019-08-15"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-04-11"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [365]
+
       FiltrationSystem:
-         Type: ["Ultrafiltration"]
-         Manufacturer: ["FilterPro Solutions"]
-         ModelNumber: ["FPS-UF500"]
-         MembraneSpecs: ["Pore size: 100 kDa, Polyethersulfone (PES)"]
-         InstallationDate: ["2020-06-30"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-03-01"]
-         CalibrationFrequency: [90]
-         LastMaintenanceDate: ["2022-12-01"]
-         MaintenanceFrequency: [180]
-         
+        Type: ["Ultrafiltration"]
+        Manufacturer: ["FilterPro Solutions"]
+        ModelNumber: ["FPS-UF500"]
+        MembraneSpecs: ["Pore size: 100 kDa, Polyethersulfone (PES)"]
+        InstallationDate: ["2020-06-30"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-03-01"]
+        CalibrationFrequency: [90]
+        LastMaintenanceDate: ["2022-12-01"]
+        MaintenanceFrequency: [180]
+
       FormulationEquipment:
-         Type: ["Mixer"]
-         Manufacturer: ["MixMax Equipments"]
-         ModelNumber: ["MMX-500"]
-         Capacity: ["500 L"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-04-10"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-10"]
-         MaintenanceFrequency: [365]
-         
+        Type: ["Mixer"]
+        Manufacturer: ["MixMax Equipments"]
+        ModelNumber: ["MMX-500"]
+        Capacity: ["500 L"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-04-10"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-10"]
+        MaintenanceFrequency: [365]
+
       FormulationMaterial:
-         Type: ["Stabilizers"]
-         Manufacturer: ["StablePharma Inc."]
-         ReceivedDate: ["2023-03-15"]
-         ExpiryDate: ["2025-03-15"]
-         StorageCondition: ["Store at room temperature, away from moisture and light"]
-         Quantity: [100.0] # Assuming the quantity is measured in kilograms
-         
+        Type: ["Stabilizers"]
+        Manufacturer: ["StablePharma Inc."]
+        ReceivedDate: ["2023-03-15"]
+        ExpiryDate: ["2025-03-15"]
+        StorageCondition:
+          ["Store at room temperature, away from moisture and light"]
+        Quantity: [100.0] # Assuming the quantity is measured in kilograms
+
       LyophilizationEquipment:
-         Manufacturer: ["FreezeDryCo"]
-         ModelNumber: ["FZD-5000"]
-         Capacity: ["500 L"]
-         ShelfArea: ["2.5 square meters"]
-         CondenserTempRange: ["-80°C to -50°C"]
-         VacuumRange: ["10 Pa to 1 Pa"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-06-01"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-05-15"]
-         MaintenanceFrequency: [365]
-         
+        Manufacturer: ["FreezeDryCo"]
+        ModelNumber: ["FZD-5000"]
+        Capacity: ["500 L"]
+        ShelfArea: ["2.5 square meters"]
+        CondenserTempRange: ["-80°C to -50°C"]
+        VacuumRange: ["10 Pa to 1 Pa"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-06-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-05-15"]
+        MaintenanceFrequency: [365]
+
       LyophilizationVial:
-         VialType: ["Type I Glass"]
-         VolumeCapacity: [10.0]
-         Manufacturer: ["VialPro"]
-         SterilizationDate: ["2023-04-01"]
-         ExpiryDate: ["2024-04-01"]
-         
+        VialType: ["Type I Glass"]
+        VolumeCapacity: [10.0]
+        Manufacturer: ["VialPro"]
+        SterilizationDate: ["2023-04-01"]
+        ExpiryDate: ["2024-04-01"]
+
       InspectionEquipment:
-         Manufacturer: ["InspectTech"]
-         ModelNumber: ["IT-2000"]
-         InspectionType: ["Visual"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-04-10"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-15"]
-         MaintenanceFrequency: [365]
-         
+        Manufacturer: ["InspectTech"]
+        ModelNumber: ["IT-2000"]
+        InspectionType: ["Visual"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-04-10"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-15"]
+        MaintenanceFrequency: [365]
+
       LabelingEquipment:
-         Manufacturer: ["LabelTech"]
-         ModelNumber: ["LT-1000"]
-         LabelType: ["Adhesive Label"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-04-15"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-10"]
-         MaintenanceFrequency: [365]
-         
+        Manufacturer: ["LabelTech"]
+        ModelNumber: ["LT-1000"]
+        LabelType: ["Adhesive Label"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-04-15"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-10"]
+        MaintenanceFrequency: [365]
+
       PackagingEquipment:
-         Manufacturer: ["PackCo"]
-         ModelNumber: ["PC-2000"]
-         PackagingType: ["Blister Pack"]
-         Status: ["Operational"]
-         LastCalibrationDate: ["2023-04-05"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-01"]
-         MaintenanceFrequency: [365]
-         
+        Manufacturer: ["PackCo"]
+        ModelNumber: ["PC-2000"]
+        PackagingType: ["Blister Pack"]
+        Status: ["Operational"]
+        LastCalibrationDate: ["2023-04-05"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
       Product:
-         Description: ["Ibuprofen - Advil"]
-         ProductCode: ["ABC123"]
-         Formula: ["C13H18O2"]
-         DosageForm: ["Tablet"]
-         Strength: ["200 mg"]
-         
+        Description: ["Ibuprofen - Advil"]
+        ProductCode: ["ABC123"]
+        Formula: ["C13H18O2"]
+        DosageForm: ["Tablet"]
+        Strength: ["200 mg"]
+
       Material:
-         MaterialCode: ["MC001"]
-         Name: ["Active Pharmaceutical Ingredient"]
-         Classification: ["API"]
-         QualityAttributes: ["High purity, Low residual solvents"]
-         Supplier: ["SupplierABC"]
-         InventoryLevel: [1000]
-         StorageCondition: ["Store in a cool and dry place"]
-         
+        MaterialCode: ["MC001"]
+        Name: ["Active Pharmaceutical Ingredient"]
+        Classification: ["API"]
+        QualityAttributes: ["High purity, Low residual solvents"]
+        Supplier: ["SupplierABC"]
+        InventoryLevel: [1000]
+        StorageCondition: ["Store in a cool and dry place"]
+
       Area:
-         Name: ["Granulation Area"]
-         FacilityName: ["A231 Manufacturing Facility"]
-         Classification: ["GMP Zone"]
-         Purpose: ["Granulation of solid dosage forms"]
-         AccessRestrictions: ["Restricted access: authorized personnel only"]
-         
+        Name: ["Granulation Area"]
+        FacilityName: ["A231 Manufacturing Facility"]
+        Classification: ["GMP Zone"]
+        Purpose: ["Granulation of solid dosage forms"]
+        AccessRestrictions: ["Restricted access: authorized personnel only"]
+
       Room:
-         AreaName: ["Production Area"]
-         Name: ["Mixing Room 1"]
-         Purpose: ["Milling, Blending"]
-         LastSanitationDate: ["2023-05-15"]
-         SanitationFrequency: [7]
-         
+        AreaName: ["Production Area"]
+        Name: ["Mixing Room 1"]
+        Purpose: ["Milling, Blending"]
+        LastSanitationDate: ["2023-05-15"]
+        SanitationFrequency: [7]
+
       ChemicalsAndReagent:
-         Name: ["Acetone"]
-         PurityGrade: ["ACS Grade"]
-         Manufacturer: ["ChemCorp"]
-         ExpirationDate: ["2025-12-31"]
-         StorageCondition: ["Store in a cool and dry place"]
-         
+        Name: ["Acetone"]
+        PurityGrade: ["ACS Grade"]
+        Manufacturer: ["ChemCorp"]
+        ExpirationDate: ["2025-12-31"]
+        StorageCondition: ["Store in a cool and dry place"]
+
       LaboratoryEquipment:
-         Type: ["Balance"]
-         ModelNumber: ["BA1000"]
-         Manufacturer: ["EquipmentCo"]
-         Status: ["Operational"]
-         LocationName: ["Lab Room 1"]
-         LastCalibrationDate: ["2023-04-15"]
-         CalibrationFrequency: [180]
-         LastMaintenanceDate: ["2023-01-01"]
-         MaintenanceFrequency: [365]
-         
+        Type: ["Balance"]
+        ModelNumber: ["BA1000"]
+        Manufacturer: ["EquipmentCo"]
+        Status: ["Operational"]
+        LocationName: ["Lab Room 1"]
+        LastCalibrationDate: ["2023-04-15"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
       LaboratoryLocation:
-         LocationName: ["Preparation Area"]
-         LocationType: ["Preparation"]
-         
+        LocationName: ["Preparation Area"]
+        LocationType: ["Preparation"]
+
       PreparedSolution:
-         ChemicalName: ["Acetaminophen"]
-         Concentration: ["100 mg/mL"]
-         VolumePrepared: [100.0]
-         PreparedBy: ["John Doe"]
-         PreparationDate: ["2023-04-20"]
-         ExpiryDate: ["2023-07-20"]
-         SolutionParameters: ['{"pH": "7.0", "Temperature": "25°C"}']  # Example JSON representation of solution parameters
-      
+        ChemicalName: ["Acetaminophen"]
+        Concentration: ["100 mg/mL"]
+        VolumePrepared: [100.0]
+        PreparedBy: ["John Doe"]
+        PreparationDate: ["2023-04-20"]
+        ExpiryDate: ["2023-07-20"]
+        SolutionParameters: ['{"pH": "7.0", "Temperature": "25°C"}'] # Example JSON representation of solution parameters
+
       StorageContainer:
-         ContainerType: ["Freezer"]
-         VolumeWithUnit: ["200 L"]
-         
+        ContainerType: ["Freezer"]
+        VolumeWithUnit: ["200 L"]
+
       CleaningAgent:
-         AgentName: ["Detergent#1"]
-         Type: ["Detergent"]
-         Manufacturer: ["CleaningCo"]
-         
+        AgentName: ["Detergent#1"]
+        Type: ["Detergent"]
+        Manufacturer: ["CleaningCo"]
+
       ProtectiveEquipment:
-         EquipmentName: ["Gloves"]
-         Type: ["Disposable"]
-         Manufacturer: ["SafetyGear Inc."]
-         ExpiryDate: ["2025-07-20"]
-         
+        EquipmentName: ["Gloves"]
+        Type: ["Disposable"]
+        Manufacturer: ["SafetyGear Inc."]
+        ExpiryDate: ["2025-07-20"]
+
       SanitationEquipment:
-         EquipmentName: ["Scrub Brush"]
-         Type: ["Manual"]
-         Manufacturer: ["CleaningCo"]
-         
+        EquipmentName: ["Scrub Brush"]
+        Type: ["Manual"]
+        Manufacturer: ["CleaningCo"]
+
       User:
-         FirstName: ["John"]
-         LastName: ["Doe"]
-         Email: ["johndoe@example.com"]
-         UserHandle: ["johndoe"]
-         Password: ["jdfsf@123"]
-         Role: ["user"]    
-         
+        FirstName: ["John"]
+        LastName: ["Doe"]
+        Email: ["johndoe@example.com"]
+        UserHandle: ["johndoe"]
+        Password: ["jdfsf@123"]
+        Role: ["user"]
+
       Blender:
-         BlendingVolume: [500]
-         BlendingSpeedRange: ['100-1000 RPM']  
-         
+        BlendingVolume: [500]
+        BlendingSpeedRange: ["100-1000 RPM"]
+
       CoatingMachine:
-         CoatingTechnology: ['Spray Coating']
-         MaxBatchSize: [100]
-         
+        CoatingTechnology: ["Spray Coating"]
+        MaxBatchSize: [100]
+
       Dryer:
-         DryingTechnology: ['Fluidized Bed']
-         MaxDryingTemperature: [150]
-         
+        DryingTechnology: ["Fluidized Bed"]
+        MaxDryingTemperature: [150]
+
       DustExtractor:
-         ExtractionCapacity: [1000]
-         FilterType: ['Bag filter']
-         
+        ExtractionCapacity: [1000]
+        FilterType: ["Bag filter"]
+
       Granulator:
-         GranulationCapacity: [500]
-         MaxOperatingSpeed: [1000]
-         
+        GranulationCapacity: [500]
+        MaxOperatingSpeed: [1000]
+
       IBCBin:
-         VolumeCapacity: [1000]
-         
+        VolumeCapacity: [1000]
+
       InspectionMachine:
-         InspectionSpeed: [100]
-         TechnologyUsed: ["Visual Inspection"]
-         
+        InspectionSpeed: [100]
+        TechnologyUsed: ["Visual Inspection"]
+
       MillingMachine:
-         MillingCapacity: [500]
-         
+        MillingCapacity: [500]
+
       Mixer:
-         MixingCapacity: [1000]
-         MixerType: ['Planetary Mixer']
-         
+        MixingCapacity: [1000]
+        MixerType: ["Planetary Mixer"]
+
       Recipe:
-         ProductName: ["Antibiotic Tablets"]
-         RecipeName: ["Tablet Recipe 1"]
-         Formula: ["Active Ingredient: 500mg, Filler: 100mg, Disintegrant: 10mg"]
-         CreatedAt: ["2023-01-01 10:30:00"]
-         UpdatedAt: ["2023-01-02 15:45:00"]
-         
+        ProductName: ["Antibiotic Tablets"]
+        RecipeName: ["Tablet Recipe 1"]
+        Formula: ["Active Ingredient: 500mg, Filler: 100mg, Disintegrant: 10mg"]
+        CreatedAt: ["2023-01-01 10:30:00"]
+        UpdatedAt: ["2023-01-02 15:45:00"]
+
       Sifter:
-         MeshSizeRange: ["100 - 200 mesh"]
-         SiftingSpeed: [500]
-         
+        MeshSizeRange: ["100 - 200 mesh"]
+        SiftingSpeed: [500]
+
       Stirrer:
-         StirringSpeedRange: ["100 - 1000 RPM"]
-         
+        StirringSpeedRange: ["100 - 1000 RPM"]
+
       TabletDeduster:
-         DedustingEfficiency: [95]
-         DedustingSpeed: [500]
-         
+        DedustingEfficiency: [95]
+        DedustingSpeed: [500]
+
       TabletPresses:
-         MaxTabletOutput: [10000]
-         CompressionForceRange: ['10 - 50 kN']
-         
+        MaxTabletOutput: [10000]
+        CompressionForceRange: ["10 - 50 kN"]
+
       TabletToolings:
-         ToolingSize: ['8 mm']
-         ToolingShape: ['Round']
-         
+        ToolingSize: ["8 mm"]
+        ToolingShape: ["Round"]
+
       Batch:
-         BatchID: ['BATCH001']
-         ProductName: ['Antibiotic Tablets']
-         RecipeName: ['Tablet Recipe 1']
-         StartDate: ['2023-05-15 09:00:00']
-         EndDate: ['2023-05-15 17:00:00']
-         Status: ['Completed']
-         PlannedQuantityProduced: [100000]
-         ActualQuantityProduced: [99980]
+        BatchID: ["BATCH001"]
+        ProductName: ["Antibiotic Tablets"]
+        RecipeName: ["Tablet Recipe 1"]
+        StartDate: ["2023-05-15 09:00:00"]
+        EndDate: ["2023-05-15 17:00:00"]
+        Status: ["Completed"]
+        PlannedQuantityProduced: [100000]
+        ActualQuantityProduced: [99980]
+
+      Disperser:
+        ModelSerialNumber: ["DS100"]
+        Capacity: [50.5]
+        SpeedControlRange: [1000.0]
+        PowerConsumption: [2.5]
+        ViscosityRange: ["100-500 cp"]
+        ImpellerType: ["Propeller"]
+        OperationalStatus: ["Running"]
+        LocationName: ["Lab Room 1"]
+        LocationType: ["Lab"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      WeighingSystem:
+        Description: ["Analytical Balance"]
+        Capacity: [100.0]
+        Readability: [0.001]
+        Precision: [0.0001]
+        BalanceType: ["Analytical"]
+        OperationalStatus: ["Running"]
+        LocationName: ["Lab Room 1"]
+        LocationType: ["Lab"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      CompressionPress:
+        ModelSerialNumber: ["CP001"]
+        MaximumTabletDiameter: [20.0]
+        MaximumCompressionForce: [50.0]
+        TurretSpeed: [100.0]
+        NumberOfStations: [20]
+        OutputCapacity: [10000]
+        ControlSystemType: ["Automatic"]
+        LocationPlant: ["Plant A"]
+        OperationalStatus: ["Running"]
+        LocationName: ["Main Production Area"]
+        LocationType: ["Plant"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      PackagingLine:
+        ModelSerialNumber: ["PL001"]
+        LineCapacity: [100]
+        PackagingType: ["Blister"]
+        ComponentCompatibility: ["Tablet sizes"]
+        AutomationLevel: ["Fully automatic"]
+        OperationalStatus: ["Running"]
+        LocationName: ["Packaging Area 1"]
+        LocationType: ["Factory"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      Capper:
+        ModelSerialNumber: ["CP01"]
+        CappingSpeed: [1000]
+        CapTypeCompatibility: ["Screw"]
+        ContainerCompatibility: ["Bottle"]
+        TorqueControlRange: [5.0]
+        ChangeoverFlexibility: ["Quick change parts"]
+        OperationalStatus: ["Running"]
+        LocationName: ["Production Room 1"]
+        LocationType: ["Production"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      Sealer:
+        ModelSerialNumber: ["SL001"]
+        SealingSpeed: [100]
+        SealType: ["Heat"]
+        SealWidth: [2.5]
+        MaterialCompatibility: ["Foil, Plastic"]
+        TemperatureControl: [true]
+        SealingPressureRange: [0.5]
+        LocationName: ["Sealing Room 1"]
+        LocationType: ["Sealing"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+        OperationalStatus: ["Running"]
+
+      Fermenter:
+        VesselVolume: [1000]
+        VesselMaterial: ["Stainless Steel"]
+        AgitationType: ["Mechanical Agitation"]
+        AgitationSpeedRange: ["50 - 500 RPM"]
+        TemperatureControlRange: ["10 - 50°C"]
+        pHControlRange: ["pH 6.0 - pH 8.0"]
+        SamplingPorts: [4]
+        InoculationMethod: ["Batch Inoculation"]
+        HarvestMethod: ["Discontinuous Harvest"]
+        CleaningInPlaceSystem: [true]
+        SterilizationInPlaceSystem: [true]
+        ControlSystemType: ["Automated"]
+
+      Centrifuge:
+        MaximumSpeed: [10000]
+        Capacity: [500]
+        TemperatureControlRange: ["10°C - 40°C"]
+        RotorTypes: ["Fixed-Angle, Swing-Out"]
+        SafetyFeatures: ["Automatic Lid Locking, Imbalance Detection"]
+        LocationName: ["Lab 1"]
+        LocationType: ["Laboratory"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+        Status: ["Running"]
+
+      Autoclave:
+        ChamberSize: ["50L"]
+        TemperatureRange: ["100°C - 150°C"]
+        PressureRange: ["1 - 3 bar"]
+        CycleTypes: ["Sterilization, Decontamination"]
+        ValidationFeatures: ["Temperature and Pressure Monitoring"]
+        LocationName: ["Lab 1"]
+        LocationType: ["Laboratory"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+        Status: ["Running"]
+
+      ParticleCounter:
+        ParticleSizeRange: ["0.3 µm - 10 µm"]
+        FlowRate: ["1 CFM"]
+        SamplingRate: ["1 sample per minute"]
+        CommunicationProtocol: ["RS-232"]
+        LocationName: ["Cleanroom"]
+        LocationType: ["Lab"]
+        LastCalibrationDate: ["2023-01-01"]
+        CalibrationFrequency: [180]
+        LastMaintenanceDate: ["2023-01-01"]
+        MaintenanceFrequency: [365]
+
+      HVACSystem:
+        AirflowRate: ["1000 CFM"]
+        TemperatureControl: [true]
+        HumidityControl: [false]
+        FiltrationLevels: ["HEPA Filters"]
+        BackupSystems: [true]
+
+      TOCAnalyzer:
+        DetectionRange: ["0-1000 ppm"]
+        DetectionMethod: ["Combustion Oxidation"]
+        SamplingMethod: ["Grab Sampling"]
+        AnalysisTime: ["60 seconds"]
+
+      Titrator:
+        TitrationMethod: ["Potentiometric Titration"]
+        DetectionChannels: [2]
+        SampleThroughput: [60]
+        AutomationLevel: ["Semi-Automatic"]
+
+      BiologicalSafetyCabinet:
+        ClassType: ["Class II"]
+        HEPAFiltrationEfficiency: ["99.99%"]
+        AirflowPattern: ["Vertical Downflow"]
+        SashHeight: [12.0]
+
+      Spectrophotometer:
+        WavelengthRange: ["200 nm - 800 nm"]
+        Bandwidth: ["2 nm"]
+        SampleCapacity: [100]
+        PhotometricAccuracy: ["+/- 0.002 AU"]
+
+      Microscope:
+        MicroscopeType: ["Compound Microscope"]
+        MagnificationRange: ["40x - 1000x"]
+
+      VacuumOven:
+        TemperatureRange: ["25°C - 240°C"]
+        VacuumLevel: ["1 mbar"]
+        ChamberVolume: [120]
+        HeatingOptions: ["Electric"]
+
+      StabilityChamber:
+        TemperatureRange: ["20°C - 40°C"]
+        HumidityRange: ["50% - 70% RH"]
+        LightControl: ["On/Off control"]
+        ChamberSize: ["Large"]
+
+      RotaryEvaporator:
+        EvaporationFlaskVolume: [500]
+        TemperatureRange: ["20°C - 100°C"]
+        RotationSpeed: [50]
+        CondenserType: ["Dry Ice Condenser"]
+
+      CapsuleFillingMachine:
+        FillingAccuracy: ["±1%"]
+        DosageForms: ["Powder and Pellets"]
+        ProductionCapacity: [10000]
+
+      ScalesAndBalance:
+        Capacity: [500]
+        CalibrationOptions: ["External Calibration"]
+
+      FlowCytometer:
+        LaserTypes: ["Blue, Green, Red"]
+        DetectionChannels: [8]
+        SampleThroughput: [1000]
+
+      DissolutionTester:
+        TestStations: [8]
+        SpeedRange: [50.0]
+        TemperatureRange: [37.0]
+        MediaVolumeRange: [500.0]
+        SamplingAutomation: [true]
+        OperationalStatus: ["Running"]
+
+      HardnessTester:
+        TestRange: [100.0]
+        MeasurementUnits: ["Newtons"]
+        TestSpeed: [10.0]
+        SampleCapacity: [10]
+        OperationalStatus: ["Running"]
+
+      FriabilityTester:
+        TestRange: [25.0]
+        DrumSize: [30.0]
+        TimerRange: [120.0]
+        AutomationLevel: ["Semi-Automated"]
+        SampleCapacity: [1000]
+        OperationalStatus: ["Active"]

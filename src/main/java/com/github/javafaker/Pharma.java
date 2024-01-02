@@ -892,4 +892,376 @@ public class Pharma {
 		batch.setActualQuantityProduced(faker.number().numberBetween(100, 1000));
 		return batch;
 	}
+
+	public Disperser disperser() {
+		Disperser disperser = new Disperser();
+		disperser.setModelSerialNumber(faker.idNumber().valid());
+		disperser.setCapacity(faker.number().randomDouble(2, 1, 1000));
+		disperser.setSpeedControlRange(faker.number().randomDouble(2, 1, 1000));
+		disperser.setPowerConsumption(faker.number().randomDouble(2, 1, 1000));
+		disperser.setViscosityRange(faker.fakeValuesService().resolve("pharma.Disperser.ViscosityRange", this, faker));
+		disperser.setImpellerType(faker.fakeValuesService().resolve("pharma.Disperser.ImpellerType", this, faker));
+		disperser.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.Disperser.OperationalStatus", this, faker));
+		disperser.setLocationName(faker.fakeValuesService().resolve("pharma.Disperser.LocationName", this, faker));
+		disperser.setLocationType(faker.fakeValuesService().resolve("pharma.Disperser.LocationType", this, faker));
+		disperser.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		disperser.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		disperser.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		disperser.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return disperser;
+	}
+
+	public WeighingSystem weighingSystem() {
+		WeighingSystem weighingSystem = new WeighingSystem();
+		weighingSystem.setModelSerialNumber(faker.idNumber().valid());
+		weighingSystem.setCapacity(faker.number().randomDouble(2, 1, 1000));
+		weighingSystem.setReadability(faker.number().randomDouble(2, 0, 1) * 0.001);
+		weighingSystem.setPrecision(faker.number().randomDouble(2, 0, 1) * 0.001);
+		weighingSystem
+				.setBalanceType(faker.fakeValuesService().resolve("pharma.WeighingSystem.BalanceType", this, faker));
+		weighingSystem.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.WeighingSystem.OperationalStatus", this, faker));
+		weighingSystem
+				.setLocationName(faker.fakeValuesService().resolve("pharma.WeighingSystem.LocationName", this, faker));
+		weighingSystem
+				.setLocationType(faker.fakeValuesService().resolve("pharma.WeighingSystem.LocationType", this, faker));
+		weighingSystem.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		weighingSystem.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		weighingSystem.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		weighingSystem.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return weighingSystem;
+	}
+
+	public CompressionPress compressionPress() {
+		CompressionPress compressionPress = new CompressionPress();
+		compressionPress.setModelSerialNumber(faker.idNumber().valid());
+		compressionPress.setMaxTabletDiameter(faker.number().randomDouble(2, 1, 10));
+		compressionPress.setMaxCompressionForce(faker.number().randomDouble(2, 10, 500));
+		compressionPress.setTurretSpeed(faker.number().randomDouble(2, 10, 100));
+		compressionPress.setNumberOfStations(faker.number().numberBetween(1, 10));
+		compressionPress.setOutputCapacity(faker.number().numberBetween(1000, 10000));
+		compressionPress.setControlSystemType(
+				faker.fakeValuesService().resolve("pharma.CompressionPress.ControlSystemType", this, faker));
+		compressionPress.setLocationPlant(
+				faker.fakeValuesService().resolve("pharma.CompressionPress.LocationPlant", this, faker));
+		compressionPress.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.CompressionPress.OperationalStatus", this, faker));
+		compressionPress.setLocationName(
+				faker.fakeValuesService().resolve("pharma.CompressionPress.LocationName", this, faker));
+		compressionPress.setLocationType(
+				faker.fakeValuesService().resolve("pharma.CompressionPress.LocationType", this, faker));
+		compressionPress.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		compressionPress.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		compressionPress.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		compressionPress.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return compressionPress;
+	}
+
+	public PackagingLine packagingLine() {
+		PackagingLine packagingLine = new PackagingLine();
+		packagingLine.setModelSerialNumber(faker.idNumber().valid());
+		packagingLine.setLineCapacity(faker.number().numberBetween(1, 100));
+		packagingLine
+				.setPackagingType(faker.fakeValuesService().resolve("pharma.PackagingLine.PackagingType", this, faker));
+		packagingLine.setComponentCompatibility(
+				faker.fakeValuesService().resolve("pharma.PackagingLine.ComponentCompatibility", this, faker));
+		packagingLine.setAutomationLevel(
+				faker.fakeValuesService().resolve("pharma.PackagingLine.AutomationLevel", this, faker));
+		packagingLine.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.PackagingLine.OperationalStatus", this, faker));
+		packagingLine
+				.setLocationName(faker.fakeValuesService().resolve("pharma.PackagingLine.LocationName", this, faker));
+		packagingLine
+				.setLocationType(faker.fakeValuesService().resolve("pharma.PackagingLine.LocationType", this, faker));
+		packagingLine.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		packagingLine.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		packagingLine.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		packagingLine.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return packagingLine;
+	}
+
+	public Capper capper() {
+		Capper capper = new Capper();
+		capper.setModelSerialNumber(faker.idNumber().valid());
+		capper.setCappingSpeed(faker.number().numberBetween(1, 100));
+		capper.setCapTypeCompatibility(
+				faker.fakeValuesService().resolve("pharma.Capper.CapTypeCompatibility", this, faker));
+		capper.setContainerCompatibility(
+				faker.fakeValuesService().resolve("pharma.Capper.ContainerCompatibility", this, faker));
+		capper.setTorqueControlRange(faker.number().randomDouble(2, 1, 100));
+		capper.setChangeoverFlexibility(
+				faker.fakeValuesService().resolve("pharma.Capper.ChangeoverFlexibility", this, faker));
+		capper.setOperationalStatus(faker.fakeValuesService().resolve("pharma.Capper.OperationalStatus", this, faker));
+		capper.setLocationName(faker.fakeValuesService().resolve("pharma.Capper.LocationName", this, faker));
+		capper.setLocationType(faker.fakeValuesService().resolve("pharma.Capper.LocationType", this, faker));
+		capper.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		capper.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		capper.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		capper.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return capper;
+	}
+
+	public Sealer sealer() {
+		Sealer sealer = new Sealer();
+		sealer.setModelSerialNumber(faker.idNumber().valid());
+		sealer.setSealingSpeed(faker.number().numberBetween(1, 100));
+		sealer.setSealType(faker.fakeValuesService().resolve("pharma.Sealer.SealType", this, faker));
+		sealer.setSealWidth(faker.number().randomDouble(2, 0, 10));
+		sealer.setMaterialCompatibility(
+				faker.fakeValuesService().resolve("pharma.Sealer.MaterialCompatibility", this, faker));
+		sealer.setTemperatureControl(faker.random().nextBoolean());
+		sealer.setSealingPressureRange(faker.number().randomDouble(2, 1, 100));
+		sealer.setLocationName(faker.fakeValuesService().resolve("pharma.Sealer.LocationName", this, faker));
+		sealer.setLocationType(faker.fakeValuesService().resolve("pharma.Sealer.LocationType", this, faker));
+		sealer.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		sealer.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		sealer.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		sealer.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		sealer.setOperationalStatus(faker.fakeValuesService().resolve("pharma.Sealer.OperationalStatus", this, faker));
+		return sealer;
+	}
+
+	public Fermenter fermenter() {
+		Fermenter fermenter = new Fermenter();
+		fermenter.setVesselVolume(faker.number().randomDouble(2, 10, 1000));
+		fermenter.setVesselMaterial(faker.fakeValuesService().resolve("pharma.Fermenter.VesselMaterial", this, faker));
+		fermenter.setAgitationType(faker.fakeValuesService().resolve("pharma.Fermenter.AgitationType", this, faker));
+		fermenter.setAgitationSpeedRange(
+				faker.fakeValuesService().resolve("pharma.Fermenter.AgitationSpeedRange", this, faker));
+		fermenter.setTemperatureControlRange(
+				faker.fakeValuesService().resolve("pharma.Fermenter.TemperatureControlRange", this, faker));
+		fermenter.setpHControlRange(faker.fakeValuesService().resolve("pharma.Fermenter.pHControlRange", this, faker));
+		fermenter.setNumberOfSamplingPorts(faker.number().numberBetween(1, 10));
+		fermenter.setInoculationMethod(
+				faker.fakeValuesService().resolve("pharma.Fermenter.InoculationMethod", this, faker));
+		fermenter.setHarvestMethod(faker.fakeValuesService().resolve("pharma.Fermenter.HarvestMethod", this, faker));
+		fermenter.setCleaningInPlaceSystem(faker.random().nextBoolean());
+		fermenter.setSterilizationInPlaceSystem(faker.random().nextBoolean());
+		fermenter.setControlSystemType(
+				faker.fakeValuesService().resolve("pharma.Fermenter.ControlSystemType", this, faker));
+		return fermenter;
+	}
+
+	public Centrifuge centrifuge() {
+		Centrifuge centrifuge = new Centrifuge();
+		centrifuge.setMaximumSpeed(faker.number().numberBetween(1000, 10000));
+		centrifuge.setCapacity(faker.number().randomDouble(2, 1, 100));
+		centrifuge.setTemperatureControlRange(
+				faker.fakeValuesService().resolve("pharma.Centrifuge.TemperatureControlRange", this, faker));
+		centrifuge.setRotorTypes(faker.fakeValuesService().resolve("pharma.Centrifuge.RotorTypes", this, faker));
+		centrifuge
+				.setSafetyFeatures(faker.fakeValuesService().resolve("pharma.Centrifuge.SafetyFeatures", this, faker));
+		centrifuge.setLocationName(faker.fakeValuesService().resolve("pharma.Centrifuge.LocationName", this, faker));
+		centrifuge.setLocationType(faker.fakeValuesService().resolve("pharma.Centrifuge.LocationType", this, faker));
+		centrifuge.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		centrifuge.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		centrifuge.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		centrifuge.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		centrifuge.setStatus(faker.fakeValuesService().resolve("pharma.Centrifuge.Status", this, faker));
+		return centrifuge;
+	}
+
+	public Autoclave autoclave() {
+		Autoclave autoclave = new Autoclave();
+		autoclave.setChamberSize(faker.fakeValuesService().resolve("pharma.Autoclave.ChamberSize", this, faker));
+		autoclave.setTemperatureRange(
+				faker.fakeValuesService().resolve("pharma.Autoclave.TemperatureRange", this, faker));
+		autoclave.setPressureRange(faker.fakeValuesService().resolve("pharma.Autoclave.PressureRange", this, faker));
+		autoclave.setCycleTypes(faker.fakeValuesService().resolve("pharma.Autoclave.CycleTypes", this, faker));
+		autoclave.setValidationFeatures(
+				faker.fakeValuesService().resolve("pharma.Autoclave.ValidationFeatures", this, faker));
+		autoclave.setLocationName(faker.fakeValuesService().resolve("pharma.Autoclave.LocationName", this, faker));
+		autoclave.setLocationType(faker.fakeValuesService().resolve("pharma.Autoclave.LocationType", this, faker));
+		autoclave.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		autoclave.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		autoclave.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		autoclave.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		autoclave.setStatus(faker.fakeValuesService().resolve("pharma.Autoclave.Status", this, faker));
+		return autoclave;
+	}
+
+	public ParticleCounter particleCounter() {
+		ParticleCounter particleCounter = new ParticleCounter();
+		particleCounter.setParticleSizeRange(
+				faker.fakeValuesService().resolve("pharma.ParticleCounter.ParticleSizeRange", this, faker));
+		particleCounter.setFlowRate(faker.fakeValuesService().resolve("pharma.ParticleCounter.FlowRate", this, faker));
+		particleCounter
+				.setSamplingRate(faker.fakeValuesService().resolve("pharma.ParticleCounter.SamplingRate", this, faker));
+		particleCounter.setCommunicationProtocol(
+				faker.fakeValuesService().resolve("pharma.ParticleCounter.CommunicationProtocol", this, faker));
+		particleCounter
+				.setLocationName(faker.fakeValuesService().resolve("pharma.ParticleCounter.LocationName", this, faker));
+		particleCounter
+				.setLocationType(faker.fakeValuesService().resolve("pharma.ParticleCounter.LocationType", this, faker));
+		particleCounter.setLastCalibrationDate(faker.date().past(365, TimeUnit.DAYS));
+		particleCounter.setCalibrationFrequency(faker.number().numberBetween(1, 365));
+		particleCounter.setLastMaintenanceDate(faker.date().past(365, TimeUnit.DAYS));
+		particleCounter.setMaintenanceFrequency(faker.number().numberBetween(1, 365));
+		return particleCounter;
+	}
+
+	public HVACSystem hvacSystem() {
+		HVACSystem hvacSystem = new HVACSystem();
+		hvacSystem.setAirflowRate(faker.fakeValuesService().resolve("pharma.HVACSystem.AirflowRate", this, faker));
+		hvacSystem.setTemperatureControl(faker.random().nextBoolean());
+		hvacSystem.setHumidityControl(faker.random().nextBoolean());
+		hvacSystem.setFiltrationLevels(
+				faker.fakeValuesService().resolve("pharma.HVACSystem.FiltrationLevels", this, faker));
+		hvacSystem.setBackupSystems(faker.random().nextBoolean());
+		return hvacSystem;
+	}
+
+	public TOCAnalyzer tocAnalyzer() {
+		TOCAnalyzer tocAnalyzer = new TOCAnalyzer();
+		tocAnalyzer
+				.setDetectionRange(faker.fakeValuesService().resolve("pharma.TOCAnalyzer.DetectionRange", this, faker));
+		tocAnalyzer.setDetectionMethod(
+				faker.fakeValuesService().resolve("pharma.TOCAnalyzer.DetectionMethod", this, faker));
+		tocAnalyzer
+				.setSamplingMethod(faker.fakeValuesService().resolve("pharma.TOCAnalyzer.SamplingMethod", this, faker));
+		tocAnalyzer.setAnalysisTime(faker.fakeValuesService().resolve("pharma.TOCAnalyzer.AnalysisTime", this, faker));
+		return tocAnalyzer;
+	}
+
+	public Titrator titrator() {
+		Titrator titrator = new Titrator();
+		titrator.setTitrationMethod(faker.fakeValuesService().resolve("pharma.Titrator.TitrationMethod", this, faker));
+		titrator.setDetectionChannels(faker.number().numberBetween(1, 5));
+		titrator.setSampleThroughput(faker.number().numberBetween(10, 100));
+		titrator.setAutomationLevel(faker.fakeValuesService().resolve("pharma.Titrator.AutomationLevel", this, faker));
+		return titrator;
+	}
+
+	public BiologicalSafetyCabinet biologicalSafetyCabinet() {
+		BiologicalSafetyCabinet biosafetyCabinet = new BiologicalSafetyCabinet();
+		biosafetyCabinet.setClassType(
+				faker.fakeValuesService().resolve("pharma.BiologicalSafetyCabinet.ClassType", this, faker));
+		biosafetyCabinet.setHepaFiltrationEfficiency(faker.fakeValuesService()
+				.resolve("pharma.BiologicalSafetyCabinet.HEPAFiltrationEfficiency", this, faker));
+		biosafetyCabinet.setAirflowPattern(
+				faker.fakeValuesService().resolve("pharma.BiologicalSafetyCabinet.AirflowPattern", this, faker));
+		biosafetyCabinet.setSashHeight(faker.number().randomDouble(2, 30, 90));
+		return biosafetyCabinet;
+	}
+
+	public Spectrophotometer spectrophotometer() {
+		Spectrophotometer spectrophotometer = new Spectrophotometer();
+		spectrophotometer.setWavelengthRange(
+				faker.fakeValuesService().resolve("pharma.Spectrophotometer.WavelengthRange", this, faker));
+		spectrophotometer
+				.setBandwidth(faker.fakeValuesService().resolve("pharma.Spectrophotometer.Bandwidth", this, faker));
+		spectrophotometer.setSampleCapacity(faker.number().numberBetween(10, 100));
+		spectrophotometer.setPhotometricAccuracy(
+				faker.fakeValuesService().resolve("pharma.Spectrophotometer.PhotometricAccuracy", this, faker));
+		return spectrophotometer;
+	}
+
+	public Microscope microscope() {
+		Microscope microscope = new Microscope();
+		microscope
+				.setMicroscopeType(faker.fakeValuesService().resolve("pharma.Microscope.MicroscopeType", this, faker));
+		microscope.setMagnificationRange(
+				faker.fakeValuesService().resolve("pharma.Microscope.MagnificationRange", this, faker));
+		return microscope;
+	}
+
+	public VacuumOven vacuumOven() {
+		VacuumOven vacuumOven = new VacuumOven();
+		vacuumOven.setTemperatureRange(
+				faker.fakeValuesService().resolve("pharma.VacuumOven.TemperatureRange", this, faker));
+		vacuumOven.setVacuumLevel(faker.fakeValuesService().resolve("pharma.VacuumOven.VacuumLevel", this, faker));
+		vacuumOven.setChamberVolume(faker.number().randomDouble(2, 1, 1000));
+		vacuumOven
+				.setHeatingOptions(faker.fakeValuesService().resolve("pharma.VacuumOven.HeatingOptions", this, faker));
+		return vacuumOven;
+	}
+
+	public StabilityChamber stabilityChamber() {
+		StabilityChamber stabilityChamber = new StabilityChamber();
+		stabilityChamber.setTemperatureRange(
+				faker.fakeValuesService().resolve("pharma.StabilityChamber.TemperatureRange", this, faker));
+		stabilityChamber.setHumidityRange(
+				faker.fakeValuesService().resolve("pharma.StabilityChamber.HumidityRange", this, faker));
+		stabilityChamber.setLightControl(
+				faker.fakeValuesService().resolve("pharma.StabilityChamber.LightControl", this, faker));
+		stabilityChamber
+				.setChamberSize(faker.fakeValuesService().resolve("pharma.StabilityChamber.ChamberSize", this, faker));
+		return stabilityChamber;
+	}
+
+	public RotaryEvaporator rotaryEvaporator() {
+		RotaryEvaporator rotaryEvaporator = new RotaryEvaporator();
+		rotaryEvaporator.setEvaporationFlaskVolume(faker.number().randomDouble(2, 100, 1000));
+		rotaryEvaporator.setTemperatureRange(
+				faker.fakeValuesService().resolve("pharma.RotaryEvaporator.TemperatureRange", this, faker));
+		rotaryEvaporator.setRotationSpeed(faker.number().numberBetween(100, 1000));
+		rotaryEvaporator.setCondenserType(
+				faker.fakeValuesService().resolve("pharma.RotaryEvaporator.CondenserType", this, faker));
+		return rotaryEvaporator;
+	}
+
+	public CapsuleFillingMachine capsuleFillingMachine() {
+		CapsuleFillingMachine capsuleFillingMachine = new CapsuleFillingMachine();
+		capsuleFillingMachine.setFillingAccuracy(
+				faker.fakeValuesService().resolve("pharma.CapsuleFillingMachine.FillingAccuracy", this, faker));
+		capsuleFillingMachine.setDosageForms(
+				faker.fakeValuesService().resolve("pharma.CapsuleFillingMachine.DosageForms", this, faker));
+		capsuleFillingMachine.setProductionCapacity(faker.number().numberBetween(5000, 50000));
+		return capsuleFillingMachine;
+	}
+
+	public ScaleAndBalance scaleAndBalance() {
+		ScaleAndBalance scaleAndBalance = new ScaleAndBalance();
+		scaleAndBalance.setCapacity(faker.number().numberBetween(100, 10000));
+		scaleAndBalance.setCalibrationOptions(
+				faker.fakeValuesService().resolve("pharma.ScaleAndBalance.CalibrationOptions", this, faker));
+		return scaleAndBalance;
+	}
+
+	public FlowCytometer flowCytometer() {
+		FlowCytometer flowCytometer = new FlowCytometer();
+		flowCytometer.setLaserTypes(faker.fakeValuesService().resolve("pharma.FlowCytometer.LaserTypes", this, faker));
+		flowCytometer.setDetectionChannels(faker.number().numberBetween(1, 10));
+		flowCytometer.setSampleThroughput(faker.number().numberBetween(10, 1000));
+		return flowCytometer;
+	}
+
+	public DissolutionTester dissolutionTester() {
+		DissolutionTester dissolutionTester = new DissolutionTester();
+		dissolutionTester.setTestStations(faker.number().numberBetween(1, 10));
+		dissolutionTester.setSpeedRange(faker.number().randomDouble(2, 10, 100));
+		dissolutionTester.setTemperatureRange(faker.number().randomDouble(2, 20, 50));
+		dissolutionTester.setMediaVolumeRange(faker.number().randomDouble(2, 100, 1000));
+		dissolutionTester.setSamplingAutomation(faker.random().nextBoolean());
+		dissolutionTester.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.DissolutionTester.OperationalStatus", this, faker));
+		return dissolutionTester;
+	}
+
+	public HardnessTester hardnessTester() {
+		HardnessTester hardnessTester = new HardnessTester();
+		hardnessTester.setTestRange(faker.number().randomDouble(2, 0, 100));
+		hardnessTester.setMeasurementUnits(
+				faker.fakeValuesService().resolve("pharma.HardnessTester.MeasurementUnits", this, faker));
+		hardnessTester.setTestSpeed(faker.number().randomDouble(2, 0, 10));
+		hardnessTester.setSampleCapacity(faker.number().numberBetween(1, 1000));
+		hardnessTester.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.HardnessTester.OperationalStatus", this, faker));
+		return hardnessTester;
+	}
+
+	public FriabilityTester friabilityTester() {
+		FriabilityTester friabilityTester = new FriabilityTester();
+		friabilityTester.setTestRange(faker.number().randomDouble(2, 0, 100));
+		friabilityTester.setDrumSize(faker.number().randomDouble(2, 0, 1000));
+		friabilityTester.setTimerRange(faker.number().randomDouble(2, 0, 100));
+		friabilityTester.setAutomationLevel(
+				faker.fakeValuesService().resolve("pharma.FriabilityTester.AutomationLevel", this, faker));
+		friabilityTester.setSampleCapacity(faker.number().numberBetween(1, 1000));
+		friabilityTester.setOperationalStatus(
+				faker.fakeValuesService().resolve("pharma.FriabilityTester.OperationalStatus", this, faker));
+		return friabilityTester;
+	}
+
 }
