@@ -1190,3 +1190,495 @@ Date lastMaintenanceDate = disperser.getLastMaintenanceDate();
 int maintenanceFrequency = disperser.getMaintenanceFrequency();
 
 
+/**
+ * WeighingSystem Class:
+ * Represents a weighing system used within the pharmaceutical manufacturing environment.
+ * It contains details such as model serial number, description, capacity, readability, precision,
+ * balance type, operational status, location, calibration and maintenance information.
+ */
+
+// Accessing WeighingSystem Class:
+WeighingSystem weighingSystem = pharma.weighingSystem();
+
+// Accessing Methods:
+String modelSerialNumber = weighingSystem.getModelSerialNumber();
+String description = weighingSystem.getDescription();
+double capacity = weighingSystem.getCapacity();
+double readability = weighingSystem.getReadability();
+double precision = weighingSystem.getPrecision();
+String balanceType = weighingSystem.getBalanceType();
+String operationalStatus = weighingSystem.getOperationalStatus();
+String locationName = weighingSystem.getLocationName();
+String locationType = weighingSystem.getLocationType();
+Date lastCalibrationDate = weighingSystem.getLastCalibrationDate();
+int calibrationFrequency = weighingSystem.getCalibrationFrequency();
+Date lastMaintenanceDate = weighingSystem.getLastMaintenanceDate();
+int maintenanceFrequency = weighingSystem.getMaintenanceFrequency();
+
+
+
+/**
+ * CompressionPress Class:
+ * Represents a compression press used in pharmaceutical manufacturing. 
+ * It contains information about its model serial number, maximum tablet diameter,
+ * maximum compression force, turret speed, number of stations, output capacity,
+ * control system type, location details, operational status, and maintenance information.
+ */
+
+// Accessing CompressionPress Class:
+CompressionPress compressionPress = pharma.compressionPress();
+
+// Accessing Methods:
+String modelSerialNumber = compressionPress.getModelSerialNumber();
+double maxTabletDiameter = compressionPress.getMaxTabletDiameter();
+double maxCompressionForce = compressionPress.getMaxCompressionForce();
+double turretSpeed = compressionPress.getTurretSpeed();
+int numberOfStations = compressionPress.getNumberOfStations();
+int outputCapacity = compressionPress.getOutputCapacity();
+String controlSystemType = compressionPress.getControlSystemType();
+String locationPlant = compressionPress.getLocationPlant();
+String operationalStatus = compressionPress.getOperationalStatus();
+String locationName = compressionPress.getLocationName();
+String locationType = compressionPress.getLocationType();
+Date lastCalibrationDate = compressionPress.getLastCalibrationDate();
+int calibrationFrequency = compressionPress.getCalibrationFrequency();
+Date lastMaintenanceDate = compressionPress.getLastMaintenanceDate();
+int maintenanceFrequency = compressionPress.getMaintenanceFrequency();
+
+
+
+/**
+ * PackagingLine Class:
+ * Represents a packaging line used in pharmaceutical manufacturing.
+ * It contains information about the model serial number, line capacity,
+ * packaging type, component compatibility, automation level, location details,
+ * operational status, and maintenance information.
+ */
+
+// Accessing PackagingLine Class:
+PackagingLine packagingLine = pharma.packagingLine();
+
+// Accessing Methods:
+String modelSerialNumber = packagingLine.getModelSerialNumber();
+int lineCapacity = packagingLine.getLineCapacity();
+String packagingType = packagingLine.getPackagingType();
+String componentCompatibility = packagingLine.getComponentCompatibility();
+String automationLevel = packagingLine.getAutomationLevel();
+String operationalStatus = packagingLine.getOperationalStatus();
+String locationName = packagingLine.getLocationName();
+String locationType = packagingLine.getLocationType();
+Date lastCalibrationDate = packagingLine.getLastCalibrationDate();
+int calibrationFrequency = packagingLine.getCalibrationFrequency();
+Date lastMaintenanceDate = packagingLine.getLastMaintenanceDate();
+int maintenanceFrequency = packagingLine.getMaintenanceFrequency();
+
+
+
+/**
+ * Capper Class:
+ * Represents a capper utilized in pharmaceutical manufacturing. 
+ * It contains information about the model serial number, capping speed,
+ * cap type compatibility, container compatibility, torque control range,
+ * changeover flexibility, operational status, location details, 
+ * and maintenance information.
+ */
+
+// Accessing Capper Class:
+Capper capper = pharma.capper();
+
+// Accessing Methods:
+String modelSerialNumber = capper.getModelSerialNumber();
+int cappingSpeed = capper.getCappingSpeed();
+String capTypeCompatibility = capper.getCapTypeCompatibility();
+String containerCompatibility = capper.getContainerCompatibility();
+double torqueControlRange = capper.getTorqueControlRange();
+String changeoverFlexibility = capper.getChangeoverFlexibility();
+String operationalStatus = capper.getOperationalStatus();
+String locationName = capper.getLocationName();
+String locationType = capper.getLocationType();
+Date lastCalibrationDate = capper.getLastCalibrationDate();
+int calibrationFrequency = capper.getCalibrationFrequency();
+Date lastMaintenanceDate = capper.getLastMaintenanceDate();
+int maintenanceFrequency = capper.getMaintenanceFrequency();
+
+
+/**
+ * Sealer Class:
+ * Represents a sealer used in pharmaceutical manufacturing. 
+ * It stores information about the model serial number, sealing speed,
+ * seal type, seal width, material compatibility, temperature control,
+ * sealing pressure range, location details, operational status, 
+ * and maintenance information.
+ */
+
+// Accessing Sealer Class:
+Sealer sealer = pharma.sealer();
+
+// Accessing Methods:
+String modelSerialNumber = sealer.getModelSerialNumber();
+int sealingSpeed = sealer.getSealingSpeed();
+String sealType = sealer.getSealType();
+double sealWidth = sealer.getSealWidth();
+String materialCompatibility = sealer.getMaterialCompatibility();
+boolean temperatureControl = sealer.hasTemperatureControl();
+double sealingPressureRange = sealer.getSealingPressureRange();
+String locationName = sealer.getLocationName();
+String locationType = sealer.getLocationType();
+Date lastCalibrationDate = sealer.getLastCalibrationDate();
+int calibrationFrequency = sealer.getCalibrationFrequency();
+Date lastMaintenanceDate = sealer.getLastMaintenanceDate();
+int maintenanceFrequency = sealer.getMaintenanceFrequency();
+String operationalStatus = sealer.getOperationalStatus();
+
+
+
+/**
+ * Fermenter Class:
+ * Represents a fermenter used in pharmaceutical manufacturing to facilitate fermentation processes. 
+ * It contains information about the vessel volume, vessel material, agitation type, agitation speed range,
+ * temperature control range, pH control range, number of sampling ports, inoculation method, 
+ * harvest method, cleaning in place system availability, sterilization in place system availability, 
+ * and control system type.
+ */
+
+// Accessing Fermenter Class:
+Fermenter fermenter = pharma.fermenter();
+
+// Accessing Methods:
+double vesselVolume = fermenter.getVesselVolume();
+String vesselMaterial = fermenter.getVesselMaterial();
+String agitationType = fermenter.getAgitationType();
+String agitationSpeedRange = fermenter.getAgitationSpeedRange();
+String temperatureControlRange = fermenter.getTemperatureControlRange();
+String pHControlRange = fermenter.getpHControlRange();
+int numberOfSamplingPorts = fermenter.getNumberOfSamplingPorts();
+String inoculationMethod = fermenter.getInoculationMethod();
+String harvestMethod = fermenter.getHarvestMethod();
+boolean hasCleaningInPlaceSystem = fermenter.hasCleaningInPlaceSystem();
+boolean hasSterilizationInPlaceSystem = fermenter.hasSterilizationInPlaceSystem();
+String controlSystemType = fermenter.getControlSystemType();
+
+
+/**
+ * Centrifuge Class:
+ * Represents a centrifuge utilized in pharmaceutical manufacturing processes. 
+ * It contains information about the maximum speed, capacity, temperature control range,
+ * rotor types, safety features, location details, calibration information, maintenance details,
+ * and operational status.
+ */
+
+// Accessing Centrifuge Class:
+Centrifuge centrifuge = pharma.centrifuge();
+
+// Accessing Methods:
+int maximumSpeed = centrifuge.getMaximumSpeed();
+double capacity = centrifuge.getCapacity();
+String temperatureControlRange = centrifuge.getTemperatureControlRange();
+String rotorTypes = centrifuge.getRotorTypes();
+String safetyFeatures = centrifuge.getSafetyFeatures();
+String locationName = centrifuge.getLocationName();
+String locationType = centrifuge.getLocationType();
+Date lastCalibrationDate = centrifuge.getLastCalibrationDate();
+int calibrationFrequency = centrifuge.getCalibrationFrequency();
+Date lastMaintenanceDate = centrifuge.getLastMaintenanceDate();
+int maintenanceFrequency = centrifuge.getMaintenanceFrequency();
+String status = centrifuge.getStatus();
+
+
+/**
+ * Autoclave Class:
+ * Represents an autoclave used in pharmaceutical manufacturing for sterilization purposes. 
+ * It stores information about the chamber size, temperature range, pressure range,
+ * cycle types, validation features, location details, calibration information, maintenance details,
+ * and operational status.
+ */
+
+// Accessing Autoclave Class:
+Autoclave autoclave = pharma.autoclave();
+
+// Accessing Methods:
+String chamberSize = autoclave.getChamberSize();
+String temperatureRange = autoclave.getTemperatureRange();
+String pressureRange = autoclave.getPressureRange();
+String cycleTypes = autoclave.getCycleTypes();
+String validationFeatures = autoclave.getValidationFeatures();
+String locationName = autoclave.getLocationName();
+String locationType = autoclave.getLocationType();
+Date lastCalibrationDate = autoclave.getLastCalibrationDate();
+int calibrationFrequency = autoclave.getCalibrationFrequency();
+Date lastMaintenanceDate = autoclave.getLastMaintenanceDate();
+int maintenanceFrequency = autoclave.getMaintenanceFrequency();
+String status = autoclave.getStatus();
+
+
+/**
+ * ParticleCounter Class:
+ * Represents a particle counter utilized in pharmaceutical manufacturing for measuring particulate matter. 
+ * It contains information about the particle size range, flow rate, sampling rate, communication protocol,
+ * location details, calibration information, and maintenance details.
+ */
+
+// Accessing ParticleCounter Class:
+ParticleCounter particleCounter = pharma.particleCounter();
+
+// Accessing Methods:
+String particleSizeRange = particleCounter.getParticleSizeRange();
+String flowRate = particleCounter.getFlowRate();
+String samplingRate = particleCounter.getSamplingRate();
+String communicationProtocol = particleCounter.getCommunicationProtocol();
+String locationName = particleCounter.getLocationName();
+String locationType = particleCounter.getLocationType();
+Date lastCalibrationDate = particleCounter.getLastCalibrationDate();
+int calibrationFrequency = particleCounter.getCalibrationFrequency();
+Date lastMaintenanceDate = particleCounter.getLastMaintenanceDate();
+int maintenanceFrequency = particleCounter.getMaintenanceFrequency();
+
+
+
+/**
+ * HVACSystem Class:
+ * Represents a Heating, Ventilation, and Air Conditioning (HVAC) system utilized in pharmaceutical facilities. 
+ * It stores information about the airflow rate, temperature control availability, humidity control availability,
+ * filtration levels, and backup systems.
+ */
+
+// Accessing HVACSystem Class:
+HVACSystem hvacSystem = pharma.hvacSystem();
+
+// Accessing Methods:
+String airflowRate = hvacSystem.getAirflowRate();
+boolean hasTemperatureControl = hvacSystem.hasTemperatureControl();
+boolean hasHumidityControl = hvacSystem.hasHumidityControl();
+String filtrationLevels = hvacSystem.getFiltrationLevels();
+boolean hasBackupSystems = hvacSystem.hasBackupSystems();
+
+
+/**
+ * TOCAnalyzer Class:
+ * Represents a Total Organic Carbon (TOC) analyzer used in pharmaceutical manufacturing for detecting organic impurities. 
+ * It contains information about the detection range, detection method, sampling method, and analysis time.
+ */
+
+// Accessing TOCAnalyzer Class:
+TOCAnalyzer tocAnalyzer = pharma.tocAnalyzer();
+
+// Accessing Methods:
+String detectionRange = tocAnalyzer.getDetectionRange();
+String detectionMethod = tocAnalyzer.getDetectionMethod();
+String samplingMethod = tocAnalyzer.getSamplingMethod();
+String analysisTime = tocAnalyzer.getAnalysisTime();
+
+
+/**
+ * Titrator Class:
+ * Represents a titrator utilized in pharmaceutical manufacturing for performing titration analyses. 
+ * It contains information about the titration method, detection channels, sample throughput,
+ * and automation level.
+ */
+
+// Accessing Titrator Class:
+Titrator titrator = pharma.titrator();
+
+// Accessing Methods:
+String titrationMethod = titrator.getTitrationMethod();
+int detectionChannels = titrator.getDetectionChannels();
+int sampleThroughput = titrator.getSampleThroughput();
+String automationLevel = titrator.getAutomationLevel();
+
+
+
+/**
+ * BiologicalSafetyCabinet Class:
+ * Represents a Biological Safety Cabinet (BSC) used in pharmaceutical laboratories for safe handling of materials. 
+ * It stores information about the class type, HEPA filtration efficiency, airflow pattern, and sash height.
+ */
+
+// Accessing BiologicalSafetyCabinet Class:
+BiologicalSafetyCabinet bioSafetyCabinet = pharma.biologicalSafetyCabinet();
+
+// Accessing Methods:
+String classType = bioSafetyCabinet.getClassType();
+String hepaFiltrationEfficiency = bioSafetyCabinet.getHepaFiltrationEfficiency();
+String airflowPattern = bioSafetyCabinet.getAirflowPattern();
+double sashHeight = bioSafetyCabinet.getSashHeight();
+
+
+
+/**
+ * Spectrophotometer Class:
+ * Represents a spectrophotometer used in pharmaceutical laboratories for analyzing substances' absorption spectra. 
+ * It contains information about the wavelength range, bandwidth, sample capacity,
+ * and photometric accuracy.
+ */
+
+// Accessing Spectrophotometer Class:
+Spectrophotometer spectrophotometer = pharma.spectrophotometer();
+
+// Accessing Methods:
+String wavelengthRange = spectrophotometer.getWavelengthRange();
+String bandwidth = spectrophotometer.getBandwidth();
+int sampleCapacity = spectrophotometer.getSampleCapacity();
+String photometricAccuracy = spectrophotometer.getPhotometricAccuracy();
+
+
+
+/**
+ * Microscope Class:
+ * Represents a microscope used in pharmaceutical laboratories for magnifying and observing samples. 
+ * It contains information about the microscope type and magnification range.
+ */
+
+// Accessing Microscope Class:
+Microscope microscope = pharma.microscope();
+
+// Accessing Methods:
+String microscopeType = microscope.getMicroscopeType();
+String magnificationRange = microscope.getMagnificationRange();
+
+/**
+ * VacuumOven Class:
+ * Represents a vacuum oven used in pharmaceutical laboratories for drying substances under vacuum conditions. 
+ * It contains information about the temperature range, vacuum level, chamber volume,
+ * and available heating options.
+ */
+
+// Accessing VacuumOven Class:
+VacuumOven vacuumOven = pharma.vacuumOven();
+
+// Accessing Methods:
+String temperatureRange = vacuumOven.getTemperatureRange();
+String vacuumLevel = vacuumOven.getVacuumLevel();
+double chamberVolume = vacuumOven.getChamberVolume();
+String heatingOptions = vacuumOven.getHeatingOptions();
+
+
+/**
+ * StabilityChamber Class:
+ * Represents a stability chamber used in pharmaceutical laboratories for conducting stability tests. 
+ * It contains information about the temperature range, humidity range, light control, and chamber size.
+ */
+
+// Accessing StabilityChamber Class:
+StabilityChamber stabilityChamber = pharma.stabilityChamber();
+
+// Accessing Methods:
+String temperatureRange = stabilityChamber.getTemperatureRange();
+String humidityRange = stabilityChamber.getHumidityRange();
+String lightControl = stabilityChamber.getLightControl();
+String chamberSize = stabilityChamber.getChamberSize();
+
+
+/**
+ * RotaryEvaporator Class:
+ * Represents a rotary evaporator used in pharmaceutical laboratories for efficient evaporation processes. 
+ * It contains information about the evaporation flask volume, temperature range, rotation speed, and condenser type.
+ */
+
+// Accessing RotaryEvaporator Class:
+RotaryEvaporator rotaryEvaporator = pharma.rotaryEvaporator();
+
+// Accessing Methods:
+double evaporationFlaskVolume = rotaryEvaporator.getEvaporationFlaskVolume();
+String temperatureRange = rotaryEvaporator.getTemperatureRange();
+int rotationSpeed = rotaryEvaporator.getRotationSpeed();
+String condenserType = rotaryEvaporator.getCondenserType();
+
+
+/**
+ * CapsuleFillingMachine Class:
+ * Represents a capsule filling machine used in pharmaceutical manufacturing for filling capsules. 
+ * It contains information about the filling accuracy, supported dosage forms, and production capacity.
+ */
+
+// Accessing CapsuleFillingMachine Class:
+CapsuleFillingMachine capsuleFillingMachine = pharma.capsuleFillingMachine();
+
+// Accessing Methods:
+String fillingAccuracy = capsuleFillingMachine.getFillingAccuracy();
+String dosageForms = capsuleFillingMachine.getDosageForms();
+int productionCapacity = capsuleFillingMachine.getProductionCapacity();
+
+
+/**
+ * ScaleAndBalance Class:
+ * Represents a scale or balance used in pharmaceutical laboratories for measuring mass or weight. 
+ * It contains information about the capacity and available calibration options.
+ */
+
+// Accessing ScaleAndBalance Class:
+ScaleAndBalance scaleAndBalance = pharma.scaleAndBalance();
+
+// Accessing Methods:
+int capacity = scaleAndBalance.getCapacity();
+String calibrationOptions = scaleAndBalance.getCalibrationOptions();
+
+
+/**
+ * FlowCytometer Class:
+ * Represents a flow cytometer used in pharmaceutical laboratories for analyzing cells or particles in a fluid suspension. 
+ * It contains information about the types of lasers, detection channels, and sample throughput.
+ */
+
+// Accessing FlowCytometer Class:
+FlowCytometer flowCytometer = pharma.flowCytometer();
+
+// Accessing Methods:
+String laserTypes = flowCytometer.getLaserTypes();
+int detectionChannels = flowCytometer.getDetectionChannels();
+int sampleThroughput = flowCytometer.getSampleThroughput();
+
+
+/**
+ * DissolutionTester Class:
+ * Represents a dissolution tester used in pharmaceutical laboratories to measure the dissolution rate of pharmaceuticals. 
+ * It contains information about the test stations, speed range, temperature range,
+ * media volume range, sampling automation, and operational status.
+ */
+
+// Accessing DissolutionTester Class:
+DissolutionTester dissolutionTester = pharma.dissolutionTester();
+
+// Accessing Methods:
+int testStations = dissolutionTester.getTestStations();
+double speedRange = dissolutionTester.getSpeedRange();
+double temperatureRange = dissolutionTester.getTemperatureRange();
+double mediaVolumeRange = dissolutionTester.getMediaVolumeRange();
+boolean hasSamplingAutomation = dissolutionTester.hasSamplingAutomation();
+String operationalStatus = dissolutionTester.getOperationalStatus();
+
+
+/**
+ * HardnessTester Class:
+ * Represents a hardness tester used in pharmaceutical manufacturing for measuring the hardness of tablets or pills. 
+ * It contains information about the test range, measurement units, test speed,
+ * sample capacity, and operational status.
+ */
+
+// Accessing HardnessTester Class:
+HardnessTester hardnessTester = pharma.hardnessTester();
+
+// Accessing Methods:
+double testRange = hardnessTester.getTestRange();
+String measurementUnits = hardnessTester.getMeasurementUnits();
+double testSpeed = hardnessTester.getTestSpeed();
+int sampleCapacity = hardnessTester.getSampleCapacity();
+String operationalStatus = hardnessTester.getOperationalStatus();
+
+
+/**
+ * FriabilityTester Class:
+ * Represents a friability tester used in pharmaceutical manufacturing to measure tablet durability. 
+ * It contains information about the test range, drum size, timer range,
+ * automation level, sample capacity, and operational status.
+ */
+
+// Accessing FriabilityTester Class:
+FriabilityTester friabilityTester = pharma.friabilityTester();
+
+// Accessing Methods:
+double testRange = friabilityTester.getTestRange();
+double drumSize = friabilityTester.getDrumSize();
+double timerRange = friabilityTester.getTimerRange();
+String automationLevel = friabilityTester.getAutomationLevel();
+int sampleCapacity = friabilityTester.getSampleCapacity();
+String operationalStatus = friabilityTester.getOperationalStatus();
