@@ -1166,5 +1166,27 @@ Date lastMaintenanceDate = waterSystem.getLastMaintenanceDate();
 int maintenanceFrequency = waterSystem.getMaintenanceFrequency();
 String monitoringPoints = waterSystem.getMonitoringPoints();
 
+/**
+ * Disperser Class:
+ * Represents a disperser used in pharmaceutical manufacturing. 
+ */
+
+// Accessing Disperser Class:
+Disperser disperser = pharma.disperser();
+
+// Accessing Methods:
+String modelSerialNumber = disperser.getModelSerialNumber();
+double capacity = disperser.getCapacity();
+double speedControlRange = disperser.getSpeedControlRange();
+double powerConsumption = disperser.getPowerConsumption();
+String viscosityRange = disperser.getViscosityRange();
+String impellerType = disperser.getImpellerType();
+String operationalStatus = disperser.getOperationalStatus();
+String locationName = disperser.getLocationName();
+String locationType = disperser.getLocationType();
+Date lastCalibrationDate = disperser.getLastCalibrationDate();
+int calibrationFrequency = disperser.getCalibrationFrequency();
+Date lastMaintenanceDate = disperser.getLastMaintenanceDate();
+int maintenanceFrequency = disperser.getMaintenanceFrequency();
 
 
